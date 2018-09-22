@@ -1,0 +1,717 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>UV codes &mdash; NULIRG 0.0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="HA codes" href="ha_codes.html" />
+    <link rel="prev" title="Changelog" href="changelog.html" /> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> NULIRG
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="configuration.html">Configuration codes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="changelog.html">Changelog</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">UV codes</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#module-UV_dark_main">UV dark sub</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-UV_xreg_rotate">UV align</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-UV_header_rename">UV header</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-UV_astrodrizzle">UV_astrodrizzle</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-UV_psfmatch">UV_psfmatch</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="ha_codes.html">HA codes</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="raw_data.html">RAW</a></li>
+<li class="toctree-l1"><a class="reference internal" href="intermediate.html">INTER</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="images.html">images</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">NULIRG</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>UV codes</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/uv_codes.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="uv-codes">
+<h1>UV codes<a class="headerlink" href="#uv-codes" title="Permalink to this headline">¶</a></h1>
+<p>These set of codes take UV images as input</p>
+<div class="section" id="module-UV_dark_main">
+<span id="uv-dark-sub"></span><h2>UV dark sub<a class="headerlink" href="#module-UV_dark_main" title="Permalink to this headline">¶</a></h2>
+<dl class="function">
+<dt id="UV_dark_main.dark_from_ISR">
+<code class="descclassname">UV_dark_main.</code><code class="descname">dark_from_ISR</code><span class="sig-paren">(</span><em>configfile</em>, <em>section</em><span class="sig-paren">)</span><a class="headerlink" href="#UV_dark_main.dark_from_ISR" title="Permalink to this definition">¶</a></dt>
+<dd><p>This module collects all the ‘RAW’ and ‘FLT’ dark files.</p>
+<p>jhhjhjhj.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>configfile</strong> (<em>str</em>) – cofiguration file with information about all the important parameters used in ULIRG pipeline (e.g. ULIRG_params.cfg)</li>
+<li><strong>section</strong> (<em>str</em>) – section of config file with basic info of file locations. (e.g. ‘basic’).</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last"><ul class="simple">
+<li><strong>dark_RAW</strong> (<em>list of str</em>) – raw files.</li>
+<li><strong>dark_FLT</strong> (<em>list of str</em>) – flt files.</li>
+<li><strong>temp</strong> (<em>list of str</em>) – temp of all dark flt files.</li>
+</ul>
+</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="UV_dark_main.dark_sub">
+<code class="descclassname">UV_dark_main.</code><code class="descname">dark_sub</code><span class="sig-paren">(</span><em>file_name_flt</em>, <em>file_mask</em>, <em>dark_FLT</em>, <em>dark_RAW</em>, <em>temp</em>, <em>params</em>, <em>params_gal</em>, <em>gal_num</em>, <em>m1</em>, <em>rad1</em>, <em>rad_annulus</em>, <em>masks</em>, <em>masks_annulus</em>, <em>table_dark</em><span class="sig-paren">)</span><a class="headerlink" href="#UV_dark_main.dark_sub" title="Permalink to this definition">¶</a></dt>
+<dd><p>main module for dark subtraction</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>file_name_flt</strong> (<em>str</em>) – </li>
+<li><strong>file_mask</strong> – </li>
+<li><strong>dark_FLT</strong> – </li>
+<li><strong>dark_RAW</strong> – </li>
+<li><strong>temp</strong> – </li>
+<li><strong>params</strong> – </li>
+<li><strong>params_gal</strong> – </li>
+<li><strong>gal_num</strong> – </li>
+<li><strong>m1</strong> – </li>
+<li><strong>rad1</strong> – </li>
+<li><strong>rad_annulus</strong> – </li>
+<li><strong>masks</strong> – </li>
+<li><strong>masks_annulus</strong> – </li>
+<li><strong>table_dark</strong> – </li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last"><ul class="simple">
+<li><em>minimizer</em></li>
+<li><em>verification</em></li>
+<li><em>variance_fits</em></li>
+<li><em>dark_data</em></li>
+</ul>
+</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="UV_dark_main.function_dark_sub">
+<code class="descclassname">UV_dark_main.</code><code class="descname">function_dark_sub</code><span class="sig-paren">(</span><em>a</em>, <em>k</em>, <em>aper_diff_gal</em>, <em>aper_diff_dark</em>, <em>dark_radii</em>, <em>rad1</em>, <em>galaxy</em>, <em>dark</em>, <em>masks_annulus</em><span class="sig-paren">)</span><a class="headerlink" href="#UV_dark_main.function_dark_sub" title="Permalink to this definition">¶</a></dt>
+<dd><p>code for calculating minimizer value for a given set of parameters</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>a</strong> (<em>float</em>) – scaling parameter for dark</li>
+<li><strong>k</strong> (<em>float</em>) – parameter for sky in dark fitting method</li>
+<li><strong>aper_diff_gal</strong> (<em>arr</em>) – annuli mean for circular aperture  in galaxy image</li>
+<li><strong>aper_diff_dark</strong> (<em>arr</em>) – annuli mean for circular aperture in dark images</li>
+<li><strong>dark_radii</strong> (<em>float</em>) – radii to mask the galaxy (if using circular mask)</li>
+<li><strong>rad1</strong> (<em>arr</em>) – list of radii</li>
+<li><strong>galaxy</strong> (<em>2d arr</em>) – galaxy imahe</li>
+<li><strong>dark</strong> (<em>2d arr</em>) – dark image</li>
+<li><strong>masks_annulus</strong> (<em>2d arr</em>) – annuli mask pixels</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><strong>min_value</strong></p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">minimizer value</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="UV_dark_main.galaxy_mask">
+<code class="descclassname">UV_dark_main.</code><code class="descname">galaxy_mask</code><span class="sig-paren">(</span><em>file_smooth</em>, <em>gal_key</em>, <em>smooth_scale</em>, <em>gal_num</em>, <em>seg_map</em>, <em>sex_config</em><span class="sig-paren">)</span><a class="headerlink" href="#UV_dark_main.galaxy_mask" title="Permalink to this definition">¶</a></dt>
+<dd><p>code for making a mask for galaxy image using ssextractor segemenatation maps</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>file_smooth</strong> (<em>str</em>) – smooth galaxy image</li>
+<li><strong>gal_key</strong> (<em>str</em>) – input file key (e.g. for jcmc11ctq_flt.fits, gal_key = ‘ctq’)</li>
+<li><strong>smooth_scale</strong> (<em>str</em>) – smoothing scale as provided in ‘ULIRG_params.cfg’</li>
+<li><strong>gal_num</strong> (<em>int</em>) – galaxy index (0,1,2,3,4)</li>
+<li><strong>seg_map</strong> (<em>str</em>) – name of segmentation map FITS file</li>
+<li><strong>sex_config</strong> (<em>str</em>) – default sextractor config file</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><strong>file_mask</strong> – name of the mask file</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">str</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="UV_dark_main.sextractor_seg">
+<code class="descclassname">UV_dark_main.</code><code class="descname">sextractor_seg</code><span class="sig-paren">(</span><em>file_smooth</em>, <em>sex_config</em>, <em>params_gal</em><span class="sig-paren">)</span><a class="headerlink" href="#UV_dark_main.sextractor_seg" title="Permalink to this definition">¶</a></dt>
+<dd><p>code for creating segmentaion maps using sextractor</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>file_smooth</strong> (<em>str</em>) – smoothed  galaxy image</li>
+<li><strong>sex_config</strong> (<em>str</em>) – default sextractor config file (e.g. sex_default.conf)</li>
+<li><strong>params_gal</strong> (<em>dict</em>) – dictionary of all parameters for a given ULIRG</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><strong>seg_map</strong> – name of the segmentation map FITS file</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">str</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="UV_dark_main.sky_dark_sub">
+<code class="descclassname">UV_dark_main.</code><code class="descname">sky_dark_sub</code><span class="sig-paren">(</span><em>gal_num</em>, <em>configfile</em>, <em>section</em>, <em>section_gal</em>, <em>show_output</em>, <em>dark_RAW</em>, <em>dark_FLT</em>, <em>temp</em>, <em>dark_perform</em><span class="sig-paren">)</span><a class="headerlink" href="#UV_dark_main.sky_dark_sub" title="Permalink to this definition">¶</a></dt>
+<dd><p>This the main code for sky subtraction and dark subtraction.</p>
+<p>Extended description of function.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>gal_num</strong> (<em>int</em>) – galaxy index (0,1,2,3,4)</li>
+<li><strong>config_file</strong> (<em>str</em>) – the configuration file that contains most of the parameters required for ULIRG codes (e.g. ULIRG_params.conf)</li>
+<li><strong>section</strong> (<em>str</em>) – the section of config file with basic parameters for the runs
+(e.g. ‘basic’)</li>
+<li><strong>section_gal</strong> (<em>str</em>) – the section of the config file for a given galaxy
+(e.g. ‘NULIRG1’)</li>
+<li><strong>show_output</strong> (<em>bool</em>) – True if we want to see output in terminal
+False if not (default ‘True’)</li>
+<li><strong>dark_RAW</strong> (<em>str</em>) – list of all raw ISR dark files</li>
+<li><strong>dark_FLT</strong> (<em>str</em>) – list of all FLT ISR dark files</li>
+<li><strong>temp</strong> (<em>str</em>) – list of temperatures corresponding to each dark</li>
+<li><strong>dark_perform</strong> (<em>bool</em>) – True if dark subtraction is performed, False if not</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last"><ul class="simple">
+<li><strong>table_sky</strong> (<em>table</em>)</li>
+<li><strong>table_dark</strong> (<em>table</em>)</li>
+<li><strong>seg_map</strong> (<em>arr</em>)</li>
+<li><strong>smooth_gal</strong> (<em>arr</em>)</li>
+<li><strong>masks</strong> (<em>arr</em>)</li>
+<li><strong>mask_flt</strong> (<em>arr</em>)</li>
+<li><strong>output</strong> (<em>sky subtracted image, dark subtracted image</em>)</li>
+</ul>
+</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="UV_dark_main.smooth_gal">
+<code class="descclassname">UV_dark_main.</code><code class="descname">smooth_gal</code><span class="sig-paren">(</span><em>file_name</em>, <em>gal_key</em>, <em>smooth_scale</em>, <em>params</em><span class="sig-paren">)</span><a class="headerlink" href="#UV_dark_main.smooth_gal" title="Permalink to this definition">¶</a></dt>
+<dd><p>code for smoothing galaxy image for making ssextractor segemenatations</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>file_name</strong> (<em>str</em>) – input file</li>
+<li><strong>gal_key</strong> (<em>str</em>) – input file key (e.g. for jcmc11ctq_flt.fits, gal_key = ‘ctq’)</li>
+<li><strong>smooth_scale</strong> (<em>str</em>) – smoothing scale as provided in ‘ULIRG_params.cfg’</li>
+<li><strong>params</strong> (<em>dict</em>) – dictionary of all parameters form ULIRG_params.cfg</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><strong>file_smooth</strong> – name of the output smooth file</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">str</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+<div class="section" id="module-UV_xreg_rotate">
+<span id="uv-align"></span><h2>UV align<a class="headerlink" href="#module-UV_xreg_rotate" title="Permalink to this headline">¶</a></h2>
+<dl class="function">
+<dt id="UV_xreg_rotate.iraf_rotate_command">
+<code class="descclassname">UV_xreg_rotate.</code><code class="descname">iraf_rotate_command</code><span class="sig-paren">(</span><em>key</em>, <em>rw</em>, <em>x_filter</em>, <em>primary_dir</em><span class="sig-paren">)</span><a class="headerlink" href="#UV_xreg_rotate.iraf_rotate_command" title="Permalink to this definition">¶</a></dt>
+<dd><p>This function takes the name of file as input and returns the names from IRAF rotation output</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>key</strong> – (str) key value for galaxy. e.g. jcmc11ctq_flt.fits has key == ctq</li>
+<li><strong>rw</strong> – (str) name of FLT file</li>
+<li><strong>x_filter</strong> – filter name . e.g. F165LP</li>
+<li><strong>primary_dir</strong> – Direcoty of galaxy e.g. dir/IRASF10594+3818/</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><p>(sky_dark_iraf) file name to be used for xregister. (just adding extenstion[1])</p>
+<p>rotate_out: output of roating the image</p>
+<p>sky_dark_err: ERR extension input image</p>
+<p>rotate_out_err: ERR extension of rotated image</p>
+<p>sky_dark_DQ: DQ extension of input image</p>
+<p>rotate_out_DQ: DQ extension of rotated image</p>
+</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">str</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Examples</p>
+<p>Examples should be written in doctest format, and should illustrate how
+to use the function.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">([</span><span class="n">i</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">example_generator</span><span class="p">(</span><span class="mi">4</span><span class="p">)])</span>
+<span class="go">[0, 1, 2, 3]</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="function">
+<dt id="UV_xreg_rotate.iraf_xreg_run">
+<code class="descclassname">UV_xreg_rotate.</code><code class="descname">iraf_xreg_run</code><span class="sig-paren">(</span><em>key</em>, <em>rw</em>, <em>x_filter</em>, <em>primary_dir</em>, <em>params_gal</em><span class="sig-paren">)</span><a class="headerlink" href="#UV_xreg_rotate.iraf_xreg_run" title="Permalink to this definition">¶</a></dt>
+<dd><p>This function cross correlates each image with a reference image to align them</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>key</strong> – (str) key value for galaxy. e.g. jcmc11ctq_flt.fits has key ==</li>
+<li><strong>rw</strong> – (str) name of FLT file</li>
+<li><strong>x_filter</strong> – (str)filter name . e.g. F165LP</li>
+<li><strong>primary_dir</strong> – (str)Direcoty of galaxy e.g. dir/IRASF10594+3818/</li>
+<li><strong>params_gal</strong> – (dict) Dictionary of galaxy parameters from config file</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">(xreg_out) shifted image with a reference image</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">str</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="UV_xreg_rotate.remove_files">
+<code class="descclassname">UV_xreg_rotate.</code><code class="descname">remove_files</code><span class="sig-paren">(</span><em>key</em><span class="sig-paren">)</span><a class="headerlink" href="#UV_xreg_rotate.remove_files" title="Permalink to this definition">¶</a></dt>
+<dd><p>Function to remove all intermediate files from an xregister and rotate Run</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>key</strong> – (str) keyword for an exposure</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p>Make sure to remove these old files. Otherwise outputs from xregister</p>
+<p class="last">just keep on adding additional extension to output file</p>
+</div>
+</dd></dl>
+
+<dl class="function">
+<dt id="UV_xreg_rotate.rotate">
+<code class="descclassname">UV_xreg_rotate.</code><code class="descname">rotate</code><span class="sig-paren">(</span><em>params</em>, <em>params_gal</em>, <em>dark_perform</em><span class="sig-paren">)</span><a class="headerlink" href="#UV_xreg_rotate.rotate" title="Permalink to this definition">¶</a></dt>
+<dd><p>This function rotates the image</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>key</strong> – (str) key value for galaxy. e.g. jcmc11ctq_flt.fits has key ==</li>
+<li><strong>rw</strong> – (str) name of FLT file</li>
+<li><strong>x_filter</strong> – (str)filter name . e.g. F165LP</li>
+<li><strong>params</strong> – (dict) Dictionary of ‘basic’ section of config file (common for all ULIRGs)</li>
+<li><strong>params_gal</strong> – (dict) Dictionary of galaxy parameters from config file</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">(xreg_out) shifted image with a reference image</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">str</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="UV_xreg_rotate.xreg">
+<code class="descclassname">UV_xreg_rotate.</code><code class="descname">xreg</code><span class="sig-paren">(</span><em>params</em>, <em>params_gal</em>, <em>tab</em>, <em>bad</em>, <em>dark</em>, <em>primary_dir</em>, <em>dark_perform</em><span class="sig-paren">)</span><a class="headerlink" href="#UV_xreg_rotate.xreg" title="Permalink to this definition">¶</a></dt>
+<dd><p>MAin function for applying xreguster</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>params</strong> – (dict) Dictionary of ‘basic’ section of config file (common for all ULIRGs)</li>
+<li><strong>params_gal</strong> – (dict) Dictionary of galaxy parameters from config file</li>
+<li><strong>tab</strong> – (dict) table with FLT file names</li>
+<li><strong>bad</strong> – (list) bad exposures list</li>
+<li><strong>dark</strong> – (list) exposures that need dark subtraction</li>
+<li><strong>primary_dir</strong> – (str) data_dir _ galaxy_name</li>
+<li><strong>dark_perform</strong> – (bool) default - True</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">shifted image with a reference image</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">str</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+<div class="section" id="module-UV_header_rename">
+<span id="uv-header"></span><h2>UV header<a class="headerlink" href="#module-UV_header_rename" title="Permalink to this headline">¶</a></h2>
+<dl class="function">
+<dt id="UV_header_rename.combine_FLT">
+<code class="descclassname">UV_header_rename.</code><code class="descname">combine_FLT</code><span class="sig-paren">(</span><em>params</em>, <em>params_gal</em><span class="sig-paren">)</span><a class="headerlink" href="#UV_header_rename.combine_FLT" title="Permalink to this definition">¶</a></dt>
+<dd><p>Entry point for combining different extensions of FLT images</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>params</strong> – (dict) Dictionary of ‘basic’ section of config file (common for all ULIRGs)</li>
+<li><strong>params_gal</strong> – (dict) Dictionary of galaxy parameters from config file</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="UV_header_rename.header_update">
+<code class="descclassname">UV_header_rename.</code><code class="descname">header_update</code><span class="sig-paren">(</span><em>key</em>, <em>primary_dir</em>, <em>rw</em>, <em>tab</em>, <em>filter_name</em>, <em>params_gal</em><span class="sig-paren">)</span><a class="headerlink" href="#UV_header_rename.header_update" title="Permalink to this definition">¶</a></dt>
+<dd><p>This function updates the header of the file and combines all extensions</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>key</strong> – (str) key value for galaxy. e.g. jcmc11ctq_flt.fits has key ==</li>
+<li><strong>rw</strong> – (str) name of FLT file</li>
+<li><strong>tab</strong> – (dict) dictionary of all FLT file elements.</li>
+<li><strong>filter_name</strong> – (str) filtername for the exposure</li>
+<li><strong>params_gal</strong> – (dict) Dictionary of galaxy parameters from config file</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="UV_header_rename.xreg_shift">
+<code class="descclassname">UV_header_rename.</code><code class="descname">xreg_shift</code><span class="sig-paren">(</span><em>primary_dir</em>, <em>rw</em>, <em>filter_name</em>, <em>key</em>, <em>file</em><span class="sig-paren">)</span><a class="headerlink" href="#UV_header_rename.xreg_shift" title="Permalink to this definition">¶</a></dt>
+<dd><p>This function shift values from txt files cretaed while applying xregister</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>primary_dir</strong> – (str)Direcoty of galaxy e.g. dir/IRASF10594+3818/</li>
+<li><strong>rw</strong> – (str) name of FLT file</li>
+<li><strong>key</strong> – (str) key value for galaxy. e.g. jcmc11ctq_flt.fits has key ==</li>
+<li><strong>filter_name</strong> – (str)filter name . e.g. F165LP</li>
+<li><strong>params_gal</strong> – (dict) Dictionary of galaxy parameters from config file</li>
+<li><strong>file</strong> – (str) name of the file</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">x shift and y shift of the image</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">float</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+<div class="section" id="module-UV_astrodrizzle">
+<span id="uv-astrodrizzle"></span><h2>UV_astrodrizzle<a class="headerlink" href="#module-UV_astrodrizzle" title="Permalink to this headline">¶</a></h2>
+<dl class="function">
+<dt id="UV_astrodrizzle.drizzle_SBC">
+<code class="descclassname">UV_astrodrizzle.</code><code class="descname">drizzle_SBC</code><span class="sig-paren">(</span><em>params</em>, <em>params_gal</em>, <em>i</em><span class="sig-paren">)</span><a class="headerlink" href="#UV_astrodrizzle.drizzle_SBC" title="Permalink to this definition">¶</a></dt>
+<dd><p>Entry point for combining different extensions of FLT images</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>params</strong> – (dict) Dictionary of ‘basic’ section of config file (common for all ULIRGs)</li>
+<li><strong>params_gal</strong> – (dict) Dictionary of galaxy parameters from config file</li>
+<li><strong>i</strong> – (int) ULIRG number (It goes from 0 to 4)</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+<div class="section" id="module-UV_psfmatch">
+<span id="uv-psfmatch"></span><h2>UV_psfmatch<a class="headerlink" href="#module-UV_psfmatch" title="Permalink to this headline">¶</a></h2>
+<dl class="function">
+<dt id="UV_psfmatch.psf_match">
+<code class="descclassname">UV_psfmatch.</code><code class="descname">psf_match</code><span class="sig-paren">(</span><em>params</em>, <em>params_gal</em>, <em>i</em>, <em>j</em><span class="sig-paren">)</span><a class="headerlink" href="#UV_psfmatch.psf_match" title="Permalink to this definition">¶</a></dt>
+<dd><p>Entry point for combining different extensions of FLT images</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>params</strong> – (dict) Dictionary of ‘basic’ section of config file (common for all ULIRGs)</li>
+<li><strong>params_gal</strong> – (dict) Dictionary of galaxy parameters from config file</li>
+<li><strong>i</strong> – (int) ULIRG number (It goes from 0 to 4)</li>
+<li><strong>j</strong> – (int) Filter number (It goes from 0 to 3) and correspond to (F125, F140, F150, F165)</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="ha_codes.html" class="btn btn-neutral float-right" title="HA codes" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="changelog.html" class="btn btn-neutral" title="Changelog" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2018, sourabh chauhan.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'0.0',
+            LANGUAGE:'None',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+
+  
+
+  <script type="text/javascript" src="_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

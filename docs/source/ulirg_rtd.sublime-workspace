@@ -1,0 +1,746 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"psf_s",
+				"psf_shifted"
+			],
+			[
+				"basi",
+				"basic_params"
+			],
+			[
+				"fi",
+				"filter"
+			],
+			[
+				"imli",
+				"imlist_file"
+			],
+			[
+				"mas",
+				"masks_annulus"
+			],
+			[
+				"prim",
+				"primary_dir"
+			],
+			[
+				"rotate_out",
+				"rotate_out_data"
+			],
+			[
+				"bas",
+				"basename"
+			],
+			[
+				"file_name",
+				"file_name_flt"
+			],
+			[
+				"defau",
+				"default_config"
+			],
+			[
+				"confi",
+				"config_file"
+			],
+			[
+				"dic",
+				"dict_files"
+			],
+			[
+				"conf",
+				"config_file"
+			],
+			[
+				"dark_dir",
+				"dark_dir_chosen"
+			],
+			[
+				"mean",
+				"mean_obsdate"
+			],
+			[
+				"obs",
+				"obs_date_dark"
+			],
+			[
+				"mea",
+				"mean_obsdate"
+			],
+			[
+				"sele",
+				"selected_darks"
+			],
+			[
+				"date",
+				"datetime64"
+			],
+			[
+				"get",
+				"getheader"
+			],
+			[
+				"make",
+				"make_subdir"
+			],
+			[
+				"flt",
+				"flt_files"
+			],
+			[
+				"dict",
+				"dict_entries"
+			],
+			[
+				"sub",
+				"sub_filetypes"
+			],
+			[
+				"tex",
+				"text_file"
+			],
+			[
+				"file",
+				"file_types"
+			],
+			[
+				"data",
+				"data_dir"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "index.rst",
+			"settings":
+			{
+				"buffer_size": 847,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "configuration.rst",
+			"settings":
+			{
+				"buffer_size": 228,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "changelog.rst",
+			"settings":
+			{
+				"buffer_size": 650,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "uv_codes.rst",
+			"settings":
+			{
+				"buffer_size": 364,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "ha_codes.rst",
+			"settings":
+			{
+				"buffer_size": 349,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "images.rst",
+			"settings":
+			{
+				"buffer_size": 279,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "intermediate.rst",
+			"settings":
+			{
+				"buffer_size": 5331,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "raw_data.rst",
+			"settings":
+			{
+				"buffer_size": 10555,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "__init__.py",
+			"settings":
+			{
+				"buffer_size": 9687,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"ins",
+				"Package Control: Install Package"
+			],
+			[
+				"material theme",
+				"Material Theme: Configuration"
+			],
+			[
+				"packa",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: ",
+				"Package Control: Enable Package"
+			]
+		],
+		"width": 0.0
+	},
+	"console":
+	{
+		"height": 228.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/home/sourabh/ULIRG_v2/scripts/docs/source/__pycache__",
+		"/home/sourabh/ULIRG_v2/scripts/docs/source/_static",
+		"/home/sourabh/ULIRG_v2/scripts/docs/source/_templates"
+	],
+	"file_history":
+	[
+		"/home/sourabh/ULIRG_v2/scripts/docs/source/utils.rst",
+		"/home/sourabh/ULIRG_v2/scripts/docs/source/UV_psfmatch.rst",
+		"/home/sourabh/ULIRG_v2/scripts/docs/source/installation.rst",
+		"/home/sourabh/ULIRG_v2/scripts/docs/source/HA_align.rst",
+		"/home/sourabh/ULIRG_v2/scripts/docs/source/HA_defocus.rst",
+		"/home/sourabh/ULIRG_v2/scripts/docs/source/HA_psf_cut.rst",
+		"/home/sourabh/ULIRG_v2/scripts/docs/source/UV_dark_main.rst",
+		"/home/sourabh/ULIRG_v2/scripts/docs/source/HA_mkpsf.rst",
+		"/home/sourabh/ULIRG_v2/scripts/docs/source/HA_psfmatch.rst",
+		"/home/sourabh/ULIRG_v2/scripts/docs/source/UV_xreg_rotate.pyc",
+		"/home/sourabh/ULIRG_v2/scripts/docs/source/UV_xreg_rotate.py",
+		"/home/sourabh/ULIRG_v2/scripts/docs/source/UV_psfmatch.py",
+		"/home/sourabh/ULIRG_v2/scripts/docs/source/UV_dark_main.py",
+		"/home/sourabh/ULIRG_v2/scripts/docs/source/UV_header_rename.py",
+		"/home/sourabh/ULIRG_v2/scripts/docs/source/UV_dark+sky.py",
+		"/home/sourabh/ULIRG_v2/scripts/docs/source/UV_astrodrizzle.py",
+		"/home/sourabh/ULIRG_v2/scripts/docs/source/a.rst",
+		"/home/sourabh/Downloads/CC/example_rst.py",
+		"/home/sourabh/Downloads/CC/project/index.rst",
+		"/home/sourabh/Downloads/CC/project/usingmath.py",
+		"/home/sourabh/ULIRG_v2/scripts/docs/source/UV_astrodrizzle.rst",
+		"/home/sourabh/ULIRG_v2/scripts/docs/source/UV_header_rename.rst",
+		"/home/sourabh/ULIRG_v2/scripts/docs/source/UV_xreg_rotate.rst",
+		"/home/sourabh/ULIRG_v2/scripts/docs/source/utilities.py",
+		"/home/sourabh/ULIRG_v2/scripts/docs/source/utilities_function.py",
+		"/home/sourabh/ULIRG_v2/scripts/docs/source/sky.rst",
+		"/home/sourabh/ULIRG_v2/scripts/docs/source/sky.py",
+		"/home/sourabh/ULIRG_v2/scripts/docs/source/__init__.py",
+		"/home/sourabh/ULIRG_v2/scripts/docs/source/conf.py",
+		"/home/sourabh/ULIRG_package/NULIRG/HA_mkpsf.py",
+		"/home/sourabh/ULIRG_v2/PSF/mkpsf.py",
+		"/home/sourabh/ULIRG_package/NULIRG/HA_defocus.py",
+		"/home/sourabh/ULIRG_package/NULIRG/UV_header_rename.py",
+		"/home/sourabh/ULIRG_package/config/astrodrizzle_WFC_conf.cfg",
+		"/home/sourabh/ULIRG_package/data/IRASF10594+3818/HA_PSF/TXT/loclist775_gal1.txt",
+		"/home/sourabh/ULIRG_package/configdefocus_ULIRG.txt",
+		"/home/sourabh/ULIRG_package/config/defocus.dat",
+		"/home/sourabh/ULIRG_package/data/IRASF10594+3818/HA_PSF/TXT/loclist782_gal1.txt",
+		"/home/sourabh/ULIRG_v2/scripts/ULIRG_params.py",
+		"/home/sourabh/ULIRG_v2/PSF/wfc_loc_gal1.list",
+		"/home/sourabh/ULIRG_package/data/IRASF10594+3818/HA_PSF/TXT/simpos775_gal1.txt",
+		"/home/sourabh/ULIRG_v2/PSF/simpos.txt",
+		"/home/sourabh/ULIRG_v2/PSF/simpos_gal2.txt",
+		"/home/sourabh/ULIRG_v2/PSF/psfmatch/reulirgssyntheticpsfs/simpos.txt",
+		"/home/sourabh/ULIRG_v2/PSF_v2/simpos_gal2.txt",
+		"/home/sourabh/Downloads/PA2 i think.py",
+		"/home/sourabh/ULIRG_package/NULIRG/HA_PSF.py",
+		"/home/sourabh/ULIRG_v2/PSF/PSF_commands.sh",
+		"/home/sourabh/ULIRG_v2/PSF/imlist775_gal1.txt",
+		"/home/sourabh/ULIRG_v2/PSF/finddefoc.py",
+		"/home/sourabh/Desktop/Moon Project Admin - Fall 2018 - Physics at Minnesota.html",
+		"/home/sourabh/ULIRG_package/data/IRASF10594+3818/HA_PSF/TXT/imlist775_gal1.txt",
+		"/home/sourabh/ULIRG_package/NULIRG/HA_align.py",
+		"/home/sourabh/ULIRG_package/config/FLT_list.txt",
+		"/home/sourabh/ULIRG_package/NULIRG/UV_astrodrizzle.py",
+		"/home/sourabh/ULIRG_package/NULIRG/UV_xreg_rotate.py",
+		"/home/sourabh/ULIRG_package/NULIRG/UV_psfmatch.py",
+		"/home/sourabh/ULIRG_package/NULIRG/UV_dark_main.py",
+		"/home/sourabh/ULIRG_v2/PSF/imlist782_gal1.txt",
+		"/home/sourabh/ULIRG_v2/PSF/imlist775_gal3.txt",
+		"/home/sourabh/ULIRG_v2/PSF/imlist775_gal2.txt",
+		"/home/sourabh/ULIRG_v2/PSF/galaxy_PSF_plotting.py",
+		"/home/sourabh/ULIRG_v2/PSF/imlist782_gal2.txt",
+		"/home/sourabh/ULIRG_v2/PSF/psf.sublime-workspace",
+		"/home/sourabh/ULIRG_package/config/ULIRG_params.cfg",
+		"/home/sourabh/ULIRG_package/config/test.cfg",
+		"/home/sourabh/bin/miniconda3/envs/sc_ulirg/lib/python3.5/configparser.py",
+		"/home/sourabh/ULIRG_package/NULIRG/__init__.py",
+		"/home/sourabh/ULIRG_v2/scripts/utilities_function.py",
+		"/home/sourabh/ULIRG_package/NULIRG/params_default.cfg",
+		"/home/sourabh/ULIRG_v2/scripts/ULIRG_params.cfg",
+		"/home/sourabh/ULIRG_v2/scripts/notebook/Untitled5.ipynb",
+		"/home/sourabh/ULIRG_v2/scripts/HA/galaxy_ha_cut_v3.py",
+		"/home/sourabh/ULIRG_v2/scripts/utilities_function.pyc",
+		"/home/sourabh/bin/PyRaTE/setup.py",
+		"/home/sourabh/ULIRG_v2/scripts/notebook/mytable.tex",
+		"/home/sourabh/teach.htm",
+		"/home/sourabh/Downloads/lack.tex",
+		"/home/sourabh/Desktop/Desktop_old/2018questions1.tex",
+		"/home/sourabh/ULIRG_updates/cont_flt.tex",
+		"/home/sourabh/ULIRG_v3/notebooks/a.tex",
+		"/home/sourabh/Downloads/cont_flt_v4.tex",
+		"/home/sourabh/ULIRG_v2/scripts/churchil.tex",
+		"/home/sourabh/ULIRG_v2/scripts/dark_sub_app_v4.py",
+		"/home/sourabh/bin/miniconda3/pkgs/pysynphot-0.9.12-py27_0/lib/python2.7/site-packages/pysynphot/observation.py",
+		"/home/sourabh/bin/miniconda3/pkgs/pysynphot-0.9.12-py27_0/lib/python2.7/site-packages/pysynphot/obsbandpass.py",
+		"/home/sourabh/bin/miniconda3/pkgs/pysynphot-0.9.12-py27_0/lib/python2.7/site-packages/pysynphot/__init__.py",
+		"/home/sourabh/bin/miniconda3/pkgs/pysynphot-0.9.12-py27_0/lib/python2.7/site-packages/pysynphot/wavetable.py",
+		"/home/sourabh/ULIRG_v2/scripts/galaxy_sky_dark_sub_v5.py",
+		"/home/sourabh/ULIRG_v2/scripts/dark_SBC_final/segmentation.py",
+		"/home/sourabh/Desktop/Desktop_old/oral_reserve1.tex",
+		"/home/sourabh/Desktop/Desktop_old/notes_ULIRG.tex",
+		"/home/sourabh/Desktop/Desktop_old/dark_struggle.tex",
+		"/home/sourabh/Desktop/Desktop_old/2018questions.tex",
+		"/home/sourabh/ULIRG_v2/scripts/notebook/comparison_Matt.html",
+		"/home/sourabh/ULIRG_v2/scripts/anim_effective.py",
+		"/home/sourabh/.config/sublime-text-3/Packages/User/python36.sublime-build",
+		"/home/sourabh/.config/sublime-text-3/Packages/User/python35.sublime-build",
+		"/home/sourabh/ULIRG_v2/scripts/galaxy_sky__dark_sub_v5.py",
+		"/home/sourabh/bin/sublime_things.html",
+		"/home/sourabh/bin/test.py",
+		"/home/sourabh/.config/sublime-text-3/Packages/User/Anaconda.sublime-settings",
+		"/home/sourabh/.config/sublime-text-3/Packages/Anaconda/Anaconda.sublime-settings",
+		"/home/sourabh/ch/1.php",
+		"/home/sourabh/s.txt",
+		"/home/sourabh/.config/sublime-text-3/Packages/User/Preferences.sublime-settings",
+		"/home/sourabh/.config/sublime-text-3/Packages/Default/Preferences.sublime-settings"
+	],
+	"find":
+	{
+		"height": 54.0
+	},
+	"find_in_files":
+	{
+		"height": 145.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 3,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "index.rst",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 847,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								516,
+								516
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/RestructuredText/reStructuredText.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 90.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 8,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "configuration.rst",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 228,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								90,
+								90
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/RestructuredText/reStructuredText.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "changelog.rst",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 650,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								30,
+								30
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/RestructuredText/reStructuredText.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "uv_codes.rst",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 364,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								98,
+								98
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/RestructuredText/reStructuredText.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "ha_codes.rst",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 349,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								28,
+								28
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/RestructuredText/reStructuredText.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "images.rst",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 279,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								22,
+								22
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/RestructuredText/reStructuredText.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "intermediate.rst",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 5331,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								20,
+								20
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/RestructuredText/reStructuredText.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "raw_data.rst",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 10555,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								31,
+								31
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/RestructuredText/reStructuredText.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 6,
+					"type": "text"
+				},
+				{
+					"buffer": 8,
+					"file": "__init__.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 9687,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								16,
+								16
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 7,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 38.0
+	},
+	"input":
+	{
+		"height": 56.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 241.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "Packages/User/ulirg.sublime-build",
+	"project": "ulirg_rtd.sublime-project",
+	"replace":
+	{
+		"height": 72.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 446.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

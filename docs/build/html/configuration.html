@@ -1,0 +1,463 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Configuration codes &mdash; NULIRG 0.0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Changelog" href="changelog.html" />
+    <link rel="prev" title="Welcome to NULIRG’s documentation!" href="index.html" /> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> NULIRG
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Configuration codes</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#installation">Installation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#data-download">Data Download</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#config-files">Config files</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#requirements">Requirements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-utils">utilities function</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="changelog.html">Changelog</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="uv_codes.html">UV codes</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="ha_codes.html">HA codes</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="raw_data.html">RAW</a></li>
+<li class="toctree-l1"><a class="reference internal" href="intermediate.html">INTER</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="images.html">images</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">NULIRG</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>Configuration codes</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/configuration.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="configuration-codes">
+<h1>Configuration codes<a class="headerlink" href="#configuration-codes" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="installation">
+<h2>Installation<a class="headerlink" href="#installation" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="data-download">
+<h3>Data Download<a class="headerlink" href="#data-download" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><ul>
+<li><p class="first">Create the following directory structure.:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">subdir</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;data&#39;</span><span class="p">,</span> <span class="s1">&#39;data_dark&#39;</span><span class="p">,</span> <span class="s1">&#39;config&#39;</span><span class="p">,</span> <span class="s1">&#39;NULIRG&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+</li>
+<li><p class="first">Copy all the codes in ‘NULIRG’ folder. ‘config’ folder will have all the config files as listed in the next section. Change the ‘data_dir; in ‘params_default.cfg’.</p>
+</li>
+<li><p class="first"><strong>dark data</strong> :- Download from …. put it in ‘data_dark’ folder inside your directory</p>
+</li>
+<li><p class="first"><strong>ULIRG data</strong> :- Download from …. put it in ‘data’ folder inside your directory</p>
+</li>
+<li><p class="first"><strong>Running __init__.py</strong> :- This code with default config file for ULIRGs (params_default.cfg) creates the appropriate directory structure.:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">subsubdir</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;UV_RAW&#39;</span><span class="p">,</span> <span class="s1">&#39;UV_FLT&#39;</span><span class="p">,</span> <span class="s1">&#39;UV_DARK_SUB&#39;</span><span class="p">,</span> <span class="s1">&#39;UV_ALIGN&#39;</span><span class="p">,</span> <span class="s1">&#39;UV_DRZ&#39;</span><span class="p">,</span> <span class="s1">&#39;UV_PSF&#39;</span><span class="p">,</span>
+         <span class="s1">&#39;HA_FLC&#39;</span><span class="p">,</span> <span class="s1">&#39;HA_INTER&#39;</span><span class="p">,</span> <span class="s1">&#39;HA_DRC&#39;</span><span class="p">,</span> <span class="s1">&#39;HA_PSF&#39;</span><span class="p">]</span>
+
+<span class="n">subsubsubdir</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;FITS&#39;</span><span class="p">,</span><span class="s1">&#39;TXT&#39;</span><span class="p">,</span> <span class="s1">&#39;PNG&#39;</span> <span class="p">]</span>
+</pre></div>
+</div>
+</li>
+</ul>
+</div></blockquote>
+</div>
+<div class="section" id="config-files">
+<h3>Config files<a class="headerlink" href="#config-files" title="Permalink to this headline">¶</a></h3>
+<p>These files are located in <cite>/DIR/config/</cite> .</p>
+<blockquote>
+<div><ul class="simple">
+<li>astrodrizzle_SBC_conf.cfg</li>
+<li>astrodrizzle_WFC_conf.cfg</li>
+<li>defocus.dat</li>
+<li>params_default.cfg</li>
+<li>sex_default.conf</li>
+<li>tinybase775_gal1.txt</li>
+<li>tinybase775_gal2.txt</li>
+<li>tinybase775_gal3.txt</li>
+<li>tinybase775_gal4.txt</li>
+<li>tinybase775_gal5.txt</li>
+<li>tinybase782_gal1.txt</li>
+<li>tinybase782_gal2.txt</li>
+<li>tinybase782_gal3.txt</li>
+<li>tinybase782_gal4.txt</li>
+<li>tinybase782_gal5.txt</li>
+</ul>
+</div></blockquote>
+</div>
+</div>
+<div class="section" id="requirements">
+<h2>Requirements<a class="headerlink" href="#requirements" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><ul class="simple">
+<li>Pyraf</li>
+<li>astropy</li>
+<li>tinytim</li>
+<li>configparser</li>
+<li>argparser</li>
+<li>numpy</li>
+<li>astropy</li>
+<li>drizzlepac</li>
+<li>scipy</li>
+<li>zap</li>
+</ul>
+</div></blockquote>
+</div>
+<div class="section" id="module-utils">
+<span id="utilities-function"></span><h2>utilities function<a class="headerlink" href="#module-utils" title="Permalink to this headline">¶</a></h2>
+<p>This code contains many small utility functions that are constantly used in ULIRG reduction steps.
+The main funciton creates the location list for FLC images which are used for optical psfmatching</p>
+<dl class="function">
+<dt id="utils.FLC_centers">
+<code class="descclassname">utils.</code><code class="descname">FLC_centers</code><span class="sig-paren">(</span><em>i</em>, <em>cent_ra</em>, <em>cent_dec</em>, <em>file</em><span class="sig-paren">)</span><a class="headerlink" href="#utils.FLC_centers" title="Permalink to this definition">¶</a></dt>
+<dd><p>Function to highest flux position around the positon of galaxy in FLC files.</p>
+<p>These are used for psfmatching in optical filters.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>i</strong> – (int) index of galaxy</li>
+<li><strong>cent_ra</strong> – (float) RA of central pixel in F125 image</li>
+<li><strong>cent_dec</strong> – (float) DEC of central pixel in F125 image</li>
+<li><strong>file</strong> – (str) FLC filename</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Remember for ULIRG 5 we have to choose a different extension (4) to find the FLC center.
+Because ULIRG lies on chip-2 while for all others its on chip 1.
+Which is why extension 1 works for first 4 ULIRGs</p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">pixxx- central x<p>pixy- central y</p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">float</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="utils.UV_centers">
+<code class="descclassname">utils.</code><code class="descname">UV_centers</code><span class="sig-paren">(</span><em>params</em>, <em>params_gal</em>, <em>i</em><span class="sig-paren">)</span><a class="headerlink" href="#utils.UV_centers" title="Permalink to this definition">¶</a></dt>
+<dd><p>Function for finding center of drizzled F125 image used as refrence for optical image alignment.
+centers are found out by finding the pixel with largest flux value.
+:param params: (dict) Dictionary of ‘basic’ section of config file (common for all ULIRGs)
+:param params_gal: (dict) Dictionary of galaxy parameters from config file
+:param i: index of ULIRG</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">cent_x- center x for F125 image<p>cent_y: center y</p>
+<p>cent_r: RA of the center</p>
+<p>cent_dec: Dec of the center</p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">float</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="utils.basic_params">
+<code class="descclassname">utils.</code><code class="descname">basic_params</code><span class="sig-paren">(</span><em>configfile</em>, <em>section</em>, <em>section_gal</em><span class="sig-paren">)</span><a class="headerlink" href="#utils.basic_params" title="Permalink to this definition">¶</a></dt>
+<dd><p>Function to parse out the config file values. There are 6 sections in the config file:-
+basic, NULIRG1, NULIRG2, NULIRG3, NULIRG4, NULIRG5. Basic section contains all the parameters that are
+common for all ULIRGs, while all other paramters are ULIRG specific written in their respective sections</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>configfile</strong> – (str) the config file for the ULIRG analysis (Default file is DIR/config/params_config.cfg)</li>
+<li><strong>section</strong> – (str) ‘basic’ section which contains paramters commont for all ULIRGs</li>
+<li><strong>section_gal</strong> – (str) ULIRG specific paramters</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><p>params- Dictionary of ‘basic’ section of config file (common for all ULIRGs)</p>
+<p>params_gal: (dict) Dictionary of galaxy parameters from config file</p>
+</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">dict</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="utils.circle">
+<code class="descclassname">utils.</code><code class="descname">circle</code><span class="sig-paren">(</span><em>x</em>, <em>y</em>, <em>rad</em>, <em>col_circ1</em>, <em>ax4</em><span class="sig-paren">)</span><a class="headerlink" href="#utils.circle" title="Permalink to this definition">¶</a></dt>
+<dd><p>Plots a circle given center, radius, color and axes to plot.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="utils.file_remove">
+<code class="descclassname">utils.</code><code class="descname">file_remove</code><span class="sig-paren">(</span><em>filename</em><span class="sig-paren">)</span><a class="headerlink" href="#utils.file_remove" title="Permalink to this definition">¶</a></dt>
+<dd><p>removes a file if it exists</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="utils.masks_circular">
+<code class="descclassname">utils.</code><code class="descname">masks_circular</code><span class="sig-paren">(</span><em>cent_x</em>, <em>cent_y</em>, <em>width</em>, <em>aper_lim</em>, <em>nx</em>, <em>ny</em><span class="sig-paren">)</span><a class="headerlink" href="#utils.masks_circular" title="Permalink to this definition">¶</a></dt>
+<dd><p>Function for creating circular aperture given center of circle.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>cent_x</strong> – (float) x center pixel</li>
+<li><strong>cent_y</strong> – (float) y center pixel</li>
+<li><strong>width</strong> – (float) width of each aperture</li>
+<li><strong>aper_lim</strong> – (float) maximum radius of aperture</li>
+<li><strong>nx</strong> – (int) x width of total ULIRG image</li>
+<li><strong>ny</strong> – (int) y width of total ULIRG image</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><p>masks- circular masks</p>
+<p>masks_annulus - masks for annuli</p>
+</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">dict</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="utils.mkdirp">
+<code class="descclassname">utils.</code><code class="descname">mkdirp</code><span class="sig-paren">(</span><em>directory</em><span class="sig-paren">)</span><a class="headerlink" href="#utils.mkdirp" title="Permalink to this definition">¶</a></dt>
+<dd><p>makes adirectory if it does not exist</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="utils.rectangle">
+<code class="descclassname">utils.</code><code class="descname">rectangle</code><span class="sig-paren">(</span><em>left_corner_x</em>, <em>left_corner_y</em>, <em>x_size</em>, <em>y_size</em>, <em>color_val</em>, <em>ax2</em><span class="sig-paren">)</span><a class="headerlink" href="#utils.rectangle" title="Permalink to this definition">¶</a></dt>
+<dd><p>Function to create rectange on an image given corners and size of the image
+:param left_corner_x: (float) left x corner of rectangle
+:param left_corner_y: (float) left y corner of rectangle
+:param x_size: (float) size of the box along x axis
+:param y_size: (float) size of the box along y axis
+:param color_val: (str) color of the box lines
+:param ax2: (str) plot axes where the rectangle will be inserted</p>
+</dd></dl>
+
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="changelog.html" class="btn btn-neutral float-right" title="Changelog" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="index.html" class="btn btn-neutral" title="Welcome to NULIRG’s documentation!" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2018, sourabh chauhan.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'0.0',
+            LANGUAGE:'None',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+
+  
+
+  <script type="text/javascript" src="_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

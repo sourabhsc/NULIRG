@@ -1,0 +1,499 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>INTER &mdash; NULIRG 0.0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="images" href="images.html" />
+    <link rel="prev" title="RAW" href="raw_data.html" /> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> NULIRG
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="configuration.html">Configuration codes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="changelog.html">Changelog</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="uv_codes.html">UV codes</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="ha_codes.html">HA codes</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="raw_data.html">RAW</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">INTER</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#intermediate-files">Intermediate files</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="images.html">images</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">NULIRG</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>INTER</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/intermediate.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="inter">
+<h1>INTER<a class="headerlink" href="#inter" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="intermediate-files">
+<h2>Intermediate files<a class="headerlink" href="#intermediate-files" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="docutils">
+<colgroup>
+<col width="3%" />
+<col width="11%" />
+<col width="14%" />
+<col width="26%" />
+<col width="16%" />
+<col width="22%" />
+<col width="9%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">col0</th>
+<th class="head">process</th>
+<th class="head">subprocess</th>
+<th class="head">name</th>
+<th class="head">location</th>
+<th class="head">parent code</th>
+<th class="head">sub_module</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>0</td>
+<td>sky subtraction</td>
+<td>–</td>
+<td>prefix+_sky_flt.fits</td>
+<td>/DIR/INTERMEDIATE_FITS/</td>
+<td>/SOURCE/galaxy_sky_dark_sub_v4.py</td>
+<td>sky_dark_sub</td>
+</tr>
+<tr class="row-odd"><td>1</td>
+<td>–</td>
+<td>sky sub</td>
+<td>FLT_sky_gal_#.txt</td>
+<td>/DIR/INTERMEDIATE_TXT/</td>
+<td>/SOURCE/galaxy_sky_dark_sub_v4.py</td>
+<td>sky_dark_sub</td>
+</tr>
+<tr class="row-even"><td>2</td>
+<td>dark subtraction</td>
+<td>sextract catalog</td>
+<td>prefix+_catalog.cat</td>
+<td>/DIR/INTERMEDIATE_TXT/</td>
+<td>/SOURCE/galaxy_sky_dark_sub_v4.py</td>
+<td>sextractor_seg</td>
+</tr>
+<tr class="row-odd"><td>3</td>
+<td>–</td>
+<td>seg_map</td>
+<td>prefix+_seg_map.fits</td>
+<td>/DIR/INTERMEDIATE_FITS/</td>
+<td>/SOURCE/galaxy_sky_dark_sub_v4.py</td>
+<td>sextractor_seg</td>
+</tr>
+<tr class="row-even"><td>4</td>
+<td>–</td>
+<td>masked_flt</td>
+<td>prefix+masked_flt</td>
+<td>/DIR/INTERMEDIATE_FITS/</td>
+<td>/SOURCE/galaxy_sky_dark_sub_v4.py</td>
+<td>galaxy_mask</td>
+</tr>
+<tr class="row-odd"><td>5</td>
+<td>–</td>
+<td>flt_mask</td>
+<td>prefix+flt_mask</td>
+<td>/DIR/INTERMEDIATE_FITS/</td>
+<td>/SOURCE/galaxy_sky_dark_sub_v4.py</td>
+<td>galaxy_mask</td>
+</tr>
+<tr class="row-even"><td>6</td>
+<td>–</td>
+<td>smooth</td>
+<td>prefix+flt_smooth</td>
+<td>/DIR/INTERMEDIATE_FITS/</td>
+<td>/SOURCE/galaxy_sky_dark_sub_v4.py</td>
+<td>smooth_gal</td>
+</tr>
+<tr class="row-odd"><td>7</td>
+<td>–</td>
+<td>selected dark</td>
+<td>prefix+dark_**.fits</td>
+<td>/DIR/INTERMEDIATE_FITS/</td>
+<td>/SOURCE/galaxy_sky_dark_sub_v4.py</td>
+<td>dark_sub</td>
+</tr>
+<tr class="row-even"><td>8</td>
+<td>–</td>
+<td>dark minimizer value</td>
+<td>prefix+dark_**_diff.fits</td>
+<td>/DIR/INTERMEDIATE_FITS/</td>
+<td>/SOURCE/galaxy_sky_dark_sub_v4.py</td>
+<td>dark_sub</td>
+</tr>
+<tr class="row-odd"><td>9</td>
+<td>–</td>
+<td>minimized dark</td>
+<td>prefix+dark_**.fits</td>
+<td>/DIR/INTERMEDIATE_FITS/</td>
+<td>/SOURCE/galaxy_sky_dark_sub_v4.py</td>
+<td>dark_sub</td>
+</tr>
+<tr class="row-even"><td>10</td>
+<td>–</td>
+<td>dark sub data</td>
+<td>FLT_drk_v3_gal_#.txt</td>
+<td>/DIR/INTERMEDIATE_TXT/</td>
+<td>/SOURCE/galaxy_sky_dark_sub_v4.py</td>
+<td>dark_sub</td>
+</tr>
+<tr class="row-odd"><td>11</td>
+<td>–</td>
+<td>dark minimizer</td>
+<td>prefix+minimizer.png</td>
+<td>/DIR/INTERMEDIATE_PNG/</td>
+<td>/SOURCE/galaxy_sky_dark_sub_v4.py</td>
+<td>dark_sub</td>
+</tr>
+<tr class="row-even"><td>12</td>
+<td>–</td>
+<td>dark verification</td>
+<td>prefix+verification.png</td>
+<td>/DIR/INTERMEDIATE_PNG/</td>
+<td>/SOURCE/galaxy_sky_dark_sub_v4.py</td>
+<td>dark_sub</td>
+</tr>
+<tr class="row-odd"><td>13</td>
+<td>aligning</td>
+<td>rotate SCI</td>
+<td>prefix+_FILTER_SUB_rotate_flt.fits</td>
+<td>/DIR/INTERMEDIATE_FITS/</td>
+<td>/SOURCE/galaxy_xreg_rotate.py</td>
+<td>rotate</td>
+</tr>
+<tr class="row-even"><td>14</td>
+<td>–</td>
+<td>rotate DQ</td>
+<td>prefix+_FILTER_SUB_rotate_flt_DQ.fits</td>
+<td>/DIR/INTERMEDIATE_FITS/</td>
+<td>/SOURCE/galaxy_xreg_rotate.py</td>
+<td>rotate</td>
+</tr>
+<tr class="row-odd"><td>15</td>
+<td>–</td>
+<td>rotate ERR</td>
+<td>prefix+_FILTER_SUB_rotate_flt_err.fits</td>
+<td>/DIR/INTERMEDIATE_FITS/</td>
+<td>/SOURCE/galaxy_xreg_rotate.py</td>
+<td>rotate</td>
+</tr>
+<tr class="row-even"><td>16</td>
+<td>–</td>
+<td>shift SCI</td>
+<td>prefix+_FILTER_SUB_shift.txt</td>
+<td>/DIR/INTERMEDIATE_TXT/</td>
+<td>/SOURCE/galaxy_xreg_rotate.py</td>
+<td>xregflt</td>
+</tr>
+<tr class="row-odd"><td>17</td>
+<td>–</td>
+<td>shift ERR</td>
+<td>prefix+_FILTER_SUB_shift_err.txt</td>
+<td>/DIR/INTERMEDIATE_TXT/</td>
+<td>/SOURCE/galaxy_xreg_rotate.py</td>
+<td>xregflt</td>
+</tr>
+<tr class="row-even"><td>18</td>
+<td>–</td>
+<td>xregflt SCI</td>
+<td>prefix+_FILTER_SUB_xregflt.fits</td>
+<td>/DIR/INTERMEDIATE_FITS/</td>
+<td>/SOURCE/galaxy_xreg_rotate.py</td>
+<td>xregflt</td>
+</tr>
+<tr class="row-odd"><td>19</td>
+<td>–</td>
+<td>xregflt ERR</td>
+<td>prefix+_FILTER_SUB_xregflt_err.fits</td>
+<td>/DIR/INTERMEDIATE_FITS/</td>
+<td>/SOURCE/galaxy_xreg_rotate.py</td>
+<td>xregflt</td>
+</tr>
+<tr class="row-even"><td>20</td>
+<td>header_rename</td>
+<td>shifted DQ</td>
+<td>prefix+_shifted_err.fits</td>
+<td>/DIR/INTERMEDIATE_FITS/</td>
+<td>/SOURCE/galaxy_header_rename.py</td>
+<td>shifted</td>
+</tr>
+<tr class="row-odd"><td>21</td>
+<td>–</td>
+<td>shifted ERR</td>
+<td>prefix+_shifted_DQ.fits</td>
+<td>/DIR/INTERMEDIATE_FITS/</td>
+<td>/SOURCE/galaxy_header_rename.py</td>
+<td>shifted</td>
+</tr>
+<tr class="row-even"><td>22</td>
+<td>–</td>
+<td>allext</td>
+<td>prefix+_allext.fits</td>
+<td>/DIR/</td>
+<td>/SOURCE/galaxy_header_rename.py</td>
+<td>shifted</td>
+</tr>
+<tr class="row-odd"><td>23</td>
+<td>drizzle</td>
+<td>–</td>
+<td>gal#_UV_FILTER_drz.fits</td>
+<td>/DIR/</td>
+<td>/SOURCE/galaxy_astrodrizzle.py</td>
+<td>astrodrizzle</td>
+</tr>
+<tr class="row-even"><td>24</td>
+<td>–</td>
+<td>drz intermed.</td>
+<td>multiple files</td>
+<td>/DIR/DRIZZLE_INTER/</td>
+<td>/SOURCE/galaxy_astrodrizzle.py</td>
+<td>astrodrizzle</td>
+</tr>
+<tr class="row-odd"><td>25</td>
+<td>psfmatch</td>
+<td>psfmatch</td>
+<td>gal#_UV_FILTER_psfmatch.fits</td>
+<td>/DIR/</td>
+<td>/SOURCE/galaxy_psfmatch.py</td>
+<td>psf</td>
+</tr>
+<tr class="row-even"><td>26</td>
+<td>HA</td>
+<td>HA</td>
+<td>gal#_HA.fits</td>
+<td>/DIR/</td>
+<td>/SOURCE/galaxy_ha_cut_v3.py</td>
+<td>ha</td>
+</tr>
+<tr class="row-odd"><td>27</td>
+<td>–</td>
+<td>cut</td>
+<td>gal#_HA_FILTERha_scale_04_cut_drc.fits</td>
+<td>/DIR/DRC/</td>
+<td>/SOURCE/galaxy_ha_cut_v3.py</td>
+<td>ha_cut</td>
+</tr>
+<tr class="row-even"><td>28</td>
+<td>–</td>
+<td>align</td>
+<td>gal#_HA_FILTERha_type_UV_align.fits</td>
+<td>/DIR/INTERMEDIATE_FITS/</td>
+<td>/SOURCE/galaxy_ha_cut_v3.py</td>
+<td>ha_xreg</td>
+</tr>
+<tr class="row-odd"><td>29</td>
+<td>–</td>
+<td>sky</td>
+<td>gal#_HA_FILTERha_scale_04_sky_drc.fits</td>
+<td>/DIR/DRC/</td>
+<td>/SOURCE/galaxy_ha_cut_v3.py</td>
+<td>ha_sky</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="images.html" class="btn btn-neutral float-right" title="images" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="raw_data.html" class="btn btn-neutral" title="RAW" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2018, sourabh chauhan.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'0.0',
+            LANGUAGE:'None',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+
+  
+
+  <script type="text/javascript" src="_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

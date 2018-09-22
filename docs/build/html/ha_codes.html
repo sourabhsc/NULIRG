@@ -1,0 +1,472 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>HA codes &mdash; NULIRG 0.0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="RAW" href="raw_data.html" />
+    <link rel="prev" title="UV codes" href="uv_codes.html" /> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> NULIRG
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="configuration.html">Configuration codes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="changelog.html">Changelog</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="uv_codes.html">UV codes</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">HA codes</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#module-HA_align">HA align</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-HA_defocus">HA defocus</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-HA_mkpsf">HA mkpsf</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-HA_psf_cut">HA_psf_cut</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-HA_psfmatch">HA_psfmatch</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="raw_data.html">RAW</a></li>
+<li class="toctree-l1"><a class="reference internal" href="intermediate.html">INTER</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="images.html">images</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">NULIRG</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>HA codes</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/ha_codes.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="ha-codes">
+<h1>HA codes<a class="headerlink" href="#ha-codes" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="module-HA_align">
+<span id="ha-align"></span><h2>HA align<a class="headerlink" href="#module-HA_align" title="Permalink to this headline">¶</a></h2>
+<dl class="function">
+<dt id="HA_align.ha_cont_sub">
+<code class="descclassname">HA_align.</code><code class="descname">ha_cont_sub</code><span class="sig-paren">(</span><em>primary_dir</em>, <em>fNB_align_file</em>, <em>fBB_align_file</em>, <em>i</em><span class="sig-paren">)</span><a class="headerlink" href="#HA_align.ha_cont_sub" title="Permalink to this definition">¶</a></dt>
+<dd><p>Function to subtract continuum from HA line image</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>primary_dir</strong> – (str) working directory for a galaxy</li>
+<li><strong>fNB_align_file</strong> – (str) Narrow band image (FR782N) aligned to UV</li>
+<li><strong>fBB_align_file</strong> – Broad band image (F775W) aligbed to UV</li>
+<li><strong>i</strong> – (int) index of ULIRG</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">str</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="HA_align.ha_cut">
+<code class="descclassname">HA_align.</code><code class="descname">ha_cut</code><span class="sig-paren">(</span><em>params</em>, <em>params_gal</em>, <em>i</em><span class="sig-paren">)</span><a class="headerlink" href="#HA_align.ha_cut" title="Permalink to this definition">¶</a></dt>
+<dd><p>Function for making selecting the region of full HA image that matches with UV image</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>params</strong> – (dict) Dictionary of ‘basic’ section of config file (common for all ULIRGs)</li>
+<li><strong>params_gal</strong> – (dict) Dictionary of galaxy parameters from config file</li>
+<li><strong>i</strong> – (int) index of ULIRG</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="HA_align.ha_sky_sub">
+<code class="descclassname">HA_align.</code><code class="descname">ha_sky_sub</code><span class="sig-paren">(</span><em>file_cut</em>, <em>i</em>, <em>ax</em>, <em>ha_filter</em>, <em>primary_dir</em>, <em>style</em><span class="sig-paren">)</span><a class="headerlink" href="#HA_align.ha_sky_sub" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sky subtraction from HA images using circular apertures.</p>
+<blockquote>
+<div>Size of the aperture is specified in config file</div></blockquote>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>file_cut</strong> – (str) UV alinged file with size same as UV images</li>
+<li><strong>i</strong> – (int) index of galaxy</li>
+<li><strong>ax</strong> – (str) plotting axes</li>
+<li><strong>ha_filter</strong> – (str) HA filter (F782 or F775)</li>
+<li><strong>primary</strong><strong>)</strong><strong>dir</strong> – (str) Directory of galaxy images</li>
+<li><strong>style</strong> – (str) Plotting marker style for a given filter</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><p>(file_sky) sky subtarcted image</p>
+<p>Xc:(float) xcenter of image</p>
+<p>Yc:(float) ycenter of image</p>
+</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">str</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="HA_align.ha_xreg_match">
+<code class="descclassname">HA_align.</code><code class="descname">ha_xreg_match</code><span class="sig-paren">(</span><em>Xc</em>, <em>Yc</em>, <em>primary_dir</em>, <em>fNB_sky_file</em>, <em>fBB_sky_file</em>, <em>file_UV</em>, <em>i</em>, <em>params_gal</em><span class="sig-paren">)</span><a class="headerlink" href="#HA_align.ha_xreg_match" title="Permalink to this definition">¶</a></dt>
+<dd><p>xregister matching of UV image and HA images.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p>We are using drizzled output from F125 image for aligning the optical images.</p>
+<p class="last">We first align NB and BB images. Then we align the both the images with UV as refrence</p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>Xc</strong> – (float) xcenter of optical image</li>
+<li><strong>Yc</strong> – (float) ycenter of optical image</li>
+<li><strong>primary</strong><strong>)</strong><strong>dir</strong> – (str) Directory of galaxy images</li>
+<li><strong>fNB_sky_file</strong> – (str) Sky subtracted NB image</li>
+<li><strong>fBB_sky_file</strong> – (str) Sky subtarcted BB image</li>
+<li><strong>file_UV</strong> – (str) UV reference image</li>
+<li><strong>i</strong> – ULIRG id</li>
+<li><strong>params_gal</strong> – (dict) Dictionary of galaxy parameters from config file</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><p>file_NB_align: UV aligned  NB image</p>
+<p>file_NB_align: UV aligned BB image</p>
+</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last"><code class="docutils literal notranslate"><span class="pre">Aligned</span> <span class="pre">files</span></code></p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+<div class="section" id="module-HA_defocus">
+<span id="ha-defocus"></span><h2>HA defocus<a class="headerlink" href="#module-HA_defocus" title="Permalink to this headline">¶</a></h2>
+<p>Finds the HST focus value (in microns) for a given fits file (or list of
+files). Uses a reference table.</p>
+<dl class="function">
+<dt id="HA_defocus.findfocus">
+<code class="descclassname">HA_defocus.</code><code class="descname">findfocus</code><span class="sig-paren">(</span><em>imlst</em>, <em>refdata</em>, <em>noupd</em>, <em>hdrkey</em><span class="sig-paren">)</span><a class="headerlink" href="#HA_defocus.findfocus" title="Permalink to this definition">¶</a></dt>
+<dd><p>This function takes a list of fits frames, finds the appropriate defocus
+value from the supplied reference data file and writes the info to the
+header.</p>
+</dd></dl>
+
+</div>
+<div class="section" id="module-HA_mkpsf">
+<span id="ha-mkpsf"></span><h2>HA mkpsf<a class="headerlink" href="#module-HA_mkpsf" title="Permalink to this headline">¶</a></h2>
+<p>Script to make a psf model for a set of HST frames in a given filter.  The
+script will make raw psf models using TinyTim for each frame and simulate one
+star in the middle (i.e. on the pixel position of the galaxy) of each frame.
+PSF defocus will be read from the header for each frame.</p>
+<p>The frames are then drizzled and the background subtracted. Finally the psf
+model of the drizzled image is cut out from the subtracted image.</p>
+<p>Parameters:
+imlist      – ASCII file with list of flt images, one per line.
+loclist     – ASCII file with a list of extension ID, and x/y pixel</p>
+<blockquote>
+<div>coordinates for the raw psf model. One row per frame.</div></blockquote>
+<dl class="docutils">
+<dt>tinybase    – Filename of the tiny1 base parameter file. NB, filter</dt>
+<dd>and instrument needs to be correctly set.</dd>
+<dt>simpos      – ASCII file with simulation position (RA,DEC). World</dt>
+<dd>coordinates in degrees.</dd>
+</dl>
+<p>drizconfig  – Filename of drizzlepac configuration file.
+–outpsf    – Root of final output PSF model (optional, default is ‘PSF’
+–psfscale X    – Scale the psf model with the factor X before co-adding.</p>
+<blockquote>
+<div>The model is also scaled with the exposure time of the frame.
+(optional, default is 3).</div></blockquote>
+<table class="docutils option-list" frame="void" rules="none">
+<col class="option" />
+<col class="description" />
+<tbody valign="top">
+<tr><td class="option-group">
+<kbd><span class="option">--order <var>O</var></span></kbd></td>
+<td>– The order of the interpolation used when shifting psf model
+to sub-pixel accurate positions (optional, default is 1).</td></tr>
+<tr><td class="option-group">
+<kbd><span class="option">--defkey</span></kbd></td>
+<td>– FITS header keyword for defocus values (optional, default is
+DFOC_MOD).</td></tr>
+</tbody>
+</table>
+<p>All or part of the parameters can be supplied as a text file with
+one parameter per row and with the file name preceded by &#64;. Note
+that the correct order of the positional arguments must be kept.</p>
+<dl class="function">
+<dt id="HA_mkpsf.ha_psf">
+<code class="descclassname">HA_mkpsf.</code><code class="descname">ha_psf</code><span class="sig-paren">(</span><em>im_drz</em>, <em>ind</em>, <em>imlist</em>, <em>loclist</em>, <em>tinybase</em>, <em>simpos</em>, <em>drzcfg</em>, <em>outpsf</em>, <em>psfscale</em>, <em>order</em>, <em>defkey</em><span class="sig-paren">)</span><a class="headerlink" href="#HA_mkpsf.ha_psf" title="Permalink to this definition">¶</a></dt>
+<dd><p>Main script</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="HA_mkpsf.rand">
+<code class="descclassname">HA_mkpsf.</code><code class="descname">rand</code><span class="sig-paren">(</span><em>d0</em>, <em>d1</em>, <em>...</em>, <em>dn</em><span class="sig-paren">)</span><a class="headerlink" href="#HA_mkpsf.rand" title="Permalink to this definition">¶</a></dt>
+<dd><p>Random values in a given shape.</p>
+<p>Create an array of the given shape and populate it with
+random samples from a uniform distribution
+over <code class="docutils literal notranslate"><span class="pre">[0,</span> <span class="pre">1)</span></code>.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>d1</strong><strong>, </strong><strong>..</strong><strong>, </strong><strong>dn</strong> (<em>d0</em><em>,</em>) – The dimensions of the returned array, should all be positive.
+If no argument is given a single Python float is returned.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><strong>out</strong> – Random values.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">ndarray, shape <code class="docutils literal notranslate"><span class="pre">(d0,</span> <span class="pre">d1,</span> <span class="pre">...,</span> <span class="pre">dn)</span></code></td>
+</tr>
+</tbody>
+</table>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last"><code class="xref py py-func docutils literal notranslate"><span class="pre">random()</span></code></p>
+</div>
+<p class="rubric">Notes</p>
+<p>This is a convenience function. If you want an interface that
+takes a shape-tuple as the first argument, refer to
+np.random.random_sample .</p>
+<p class="rubric">Examples</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">rand</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span>
+<span class="go">array([[ 0.14022471,  0.96360618],  #random</span>
+<span class="go">       [ 0.37601032,  0.25528411],  #random</span>
+<span class="go">       [ 0.49313049,  0.94909878]]) #random</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="function">
+<dt id="HA_mkpsf.shift_func">
+<code class="descclassname">HA_mkpsf.</code><code class="descname">shift_func</code><span class="sig-paren">(</span><em>out_coo</em>, <em>dx</em>, <em>dy</em><span class="sig-paren">)</span><a class="headerlink" href="#HA_mkpsf.shift_func" title="Permalink to this definition">¶</a></dt>
+<dd><p>Function used for geometric transformation of images. This
+implements a simple x,y shift.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="HA_mkpsf.wcstopixfile">
+<code class="descclassname">HA_mkpsf.</code><code class="descname">wcstopixfile</code><span class="sig-paren">(</span><em>wcscoords</em>, <em>refima</em>, <em>imcoords</em><span class="sig-paren">)</span><a class="headerlink" href="#HA_mkpsf.wcstopixfile" title="Permalink to this definition">¶</a></dt>
+<dd><p>Function that converts coordinates from wcs pixel. Input and output
+are ascii files with one pair of coordinates per row. The image refima
+contains the reference system to use.</p>
+</dd></dl>
+
+</div>
+<div class="section" id="module-HA_psf_cut">
+<span id="ha-psf-cut"></span><h2>HA_psf_cut<a class="headerlink" href="#module-HA_psf_cut" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-HA_psfmatch">
+<span id="ha-psfmatch"></span><h2>HA_psfmatch<a class="headerlink" href="#module-HA_psfmatch" title="Permalink to this headline">¶</a></h2>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="raw_data.html" class="btn btn-neutral float-right" title="RAW" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="uv_codes.html" class="btn btn-neutral" title="UV codes" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2018, sourabh chauhan.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'0.0',
+            LANGUAGE:'None',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+
+  
+
+  <script type="text/javascript" src="_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
