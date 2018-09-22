@@ -15,7 +15,7 @@ setup(
     author='Sourabh Chauhan',
     packages=['NULIRG'],
     include_package_data=True,
-
+    author_email=['sourabh@astro.umn.edu'],
     package_data={'NULIRG': ['data/*', 'data_dark/*']},
     license='Creative Commons Attribution-Noncommercial-Share Alike license',
     long_description=open('README.rst').read(),

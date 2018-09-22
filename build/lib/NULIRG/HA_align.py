@@ -150,9 +150,12 @@ def ha_xreg_match(Xc, Yc, primary_dir, fNB_sky_file, fBB_sky_file, file_UV, i, p
         params_gal: (dict) Dictionary of galaxy parameters from config file
 
 
-    Returns:
-        str: (file_NB_align) UV aligned  NB image\n
-        file_NB_align: (str) UV aligned BB image\n
+    Returns: 
+        ``Aligned files``:
+            file_NB_align: UV aligned  NB image\n
+            file_NB_align: UV aligned BB image\n
+        
+    
 
   
 
