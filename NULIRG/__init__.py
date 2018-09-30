@@ -1,5 +1,4 @@
 import argparse
-
 import os
 import sys
 import glob
@@ -19,6 +18,8 @@ from utils import basic_params
 from utils import mkdirp
 from astropy.io import ascii
 #    print("Call your main application code here")
+
+__version__ = '0.0.3'
 
 
 class make_directories():
@@ -58,7 +59,7 @@ class make_directories():
         df = pd.DataFrame(dict_files)
         df.to_csv(text_file, index=False)
         d1 = ascii.read(text_file)
-        ascii.write(d1, 'test.txt', format = 'rst')
+        ascii.write(d1, 'test.txt', format='rst')
         return dict_files
 
     def copy_files(self, dict_files, galaxy_name, keep_original):
@@ -212,6 +213,7 @@ if __name__ == '__main__':
     print ('\n----------------------------------------------------------\n')
     print ('----------------------------------------------------------\n')
 
+##########<<<<<<<<<<<<<<<<< HA codes now >>>>>>>>>>>>>>>>>>>>>>> #########################
     print ("\n 10) HA image align and cut\n")
     #import HA_align
     # HA_align.main(default_config)
@@ -220,13 +222,21 @@ if __name__ == '__main__':
 
     print ("\n 11) HA image find defocus and PSFs \n")
     #import HA_defocus
-    #HA_defocus.main(default_config)
-    import HA_mkpsf
-    HA_mkpsf.main(default_config)
-    #import HA_psf_cut
-    # HA_psf_cut.main(default_config)
-    #import HA_psfmatch
-    # HA_psfmatch.main(default_config)
+    # HA_defocus.main(default_config)
+    #import HA_mkpsf
+    # HA_mkpsf.main(default_config)
+    import HA_psf_cut
+    HA_psf_cut.main(default_config)
+    import HA_psfmatch
+    HA_psfmatch.main(default_config)
 
     print ('\n----------------------------------------------------------\n')
     print ('----------------------------------------------------------\n')
+
+
+#def setup(app):
+#    app.add_html_theme('dask_sphinx_theme', path.abspath(path.dirname(__file__)))
+
+from ._version import get_versions
+__version__ = get_versions()['version']
+del get_versions
