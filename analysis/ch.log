@@ -1,0 +1,66 @@
+1407.74586
+INPUT:-counts from synphot calculation:-
+ [10825.48644862  9585.97814397   174.02533553    47.03035385]
+Optimization terminated successfully.
+         Current function value: -23.917982
+         Iterations: 3
+         Function evaluations: 141
+621 621 14.208236845796756 -0.9715542297059674 0.24606187805103236 0
+
+-----
+
+   direc: array([[ 0.00000000e+00,  0.00000000e+00,  1.00000000e+00],
+       [ 0.00000000e+00,  1.00000000e+00,  0.00000000e+00],
+       [ 8.58110078e+00,  4.64172537e-03, -2.06768120e+00]])
+     fun: -23.91798208040521
+ message: 'Optimization terminated successfully.'
+    nfev: 141
+     nit: 3
+  status: 0
+ success: True
+       x: array([14.20823685, -0.97155423,  0.24606188])
+
+------
+
+Optimization terminated successfully.
+         Current function value: -24.091677
+         Iterations: 4
+         Function evaluations: 193
+621 622 8.800842154542291 -0.8736037240738719 -2.2977876578292133 0
+
+-----
+
+   direc: array([[ 1.00000000e+00,  0.00000000e+00,  0.00000000e+00],
+       [ 0.00000000e+00,  1.00000000e+00,  0.00000000e+00],
+       [ 5.14990599e+00,  2.40254642e-03, -2.77655273e+00]])
+     fun: -24.091677167013074
+ message: 'Optimization terminated successfully.'
+    nfev: 193
+     nit: 4
+  status: 0
+ success: True
+       x: array([ 8.80084215, -0.87360372, -2.29778766])
+
+------
+
+Optimization terminated successfully.
+         Current function value: -24.124081
+         Iterations: 3
+         Function evaluations: 143
+621 623 7.578960647256087 -0.7963631937148019 -4.814732075282597 0
+
+-----
+
+   direc: array([[ 1.00000000e+00,  0.00000000e+00,  0.00000000e+00],
+       [ 0.00000000e+00,  1.00000000e+00,  0.00000000e+00],
+       [ 4.87470144e+00,  3.60988293e-03, -4.52331740e+00]])
+     fun: -24.124081282338132
+ message: 'Optimization terminated successfully.'
+    nfev: 143
+     nit: 3
+  status: 0
+ success: True
+       x: array([ 7.57896065, -0.79636319, -4.81473208])
+
+------
+

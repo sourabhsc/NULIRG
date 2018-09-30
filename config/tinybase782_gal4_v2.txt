@@ -1,0 +1,243 @@
+&BeginPar7.5
+psf_gal4_782  # Output PSF file rootname
+/home/sourabh/ULIRG_v2/PSF/tinytim-7.5/acswfc2.tab  # Name of Zernike table file
+/home/sourabh/ULIRG_v2/PSF/tinytim-7.5/acswfc2.pup  # Name of pupil table file
+00-00-0000 # Observation date (dd-mm-yyyy)
+ACS_WFC2  # Camera
+24  # Camera ID number
+No filter  # Filter
+No spectrum  # Spectrum file
+-1.000000  # Major axis jitter in mas (-1 = no jitter)
+-1.000000  # Minor axis jitter in mas
+0.000000  # Angle of jitter major axis in deg from +X axis
+1  # Number of positions
+3490 705  # Position 1
+5.326  # PSF diameter in arcsecs
+1  # Skip wavelengths with low weights? (0=no)
+0.010000  # Min good weight limit coefficient
+1  # Number of wavelengths
+0.760000 1.000000 512 # Wavelength 1 (microns), weight, grid size
+212  # Integrated PSF dimension (pixels)
+0.025122  # Integrated PSF scaling (arcsec)
+1.000000  # Subsampling factor (1 = normal)
+2  #  Use mirror maps? (0 = no, otherwise yes)
+1  #  Adjust for ACS field aberrations? (0=no)
+1  #  Apply ACS pixel scattering (0=no)
+0  # Write out pupil map at 1st wavelength?
+0  # Write out wave map at 1st wavelength?
+0  # Write out crit psf at 1st wavelength & stop?
+# Pupil Table :  acswfc2.pup
+# Do not change the order of these entries!
+# Date : Nov. 2002
+# Advanced Camera for Surveys WFC2 information
+#----------------------------------------------------------------------------
+#
+# Optical Telescope Assembly pupil information
+#
+ 0.330  = OTA Secondary Mirror Radius
+ 0.022  = OTA Spider Width 
+#
+# Mirror pad positions and radii
+#
+  0.8921  0.0000 0.065 = OTA Pad 1 (V3, V2, Pad Radius)
+ -0.4615  0.7555 0.065 = OTA Pad 2
+ -0.4564 -0.7606 0.065 = OTA Pad 3
+#
+#
+#
+ 100 1200  = ACS WFC CCD min, max detector wavelength (nm) 
+  -90.0    = Wide Field Channel image axis rotation
+  0.0495   = Wide Field Channel nominal pixel size (arcsec)
+#
+#  ACS WFC field dependent aberration coefficients (in microns)
+#
+# Focus
+#
+   -0.0355219   0.00438452 -0.000342984  1.27107e-05 -2.10710e-07  1.27769e-09
+  0.000794337 -0.000300778  2.83858e-05 -1.04250e-06  1.63716e-08 -8.94027e-11
+ -1.01848e-05  5.73051e-06 -6.04564e-07  2.28983e-08 -3.39271e-10  1.44453e-12
+ -1.54912e-07  1.92196e-08  1.78362e-11 -1.16939e-11 -7.36260e-13  1.95168e-14
+  4.26073e-09 -1.18032e-09  8.96831e-11 -3.26772e-12  6.41500e-14 -5.45271e-16
+ -2.24058e-11  6.72550e-12 -5.42396e-13  2.00480e-14 -3.70394e-16  2.81851e-18
+#
+# X astig
+#
+   -0.0190741   0.00186978 -2.23265e-05  1.22187e-07 -2.18771e-09  1.63419e-11
+ -0.000329515 -4.41647e-05  1.93380e-06 -5.18958e-08  7.24592e-10 -3.68420e-12
+  1.56235e-05  4.65189e-08 -1.07606e-08  7.10042e-10 -1.58268e-11  9.99363e-14
+ -6.39969e-07  3.86306e-08 -1.41748e-09  2.10067e-11 -5.68776e-14 -5.11122e-16
+  9.21185e-09 -6.47715e-10  2.38761e-11 -4.31864e-13  3.26897e-15 -6.97238e-18
+ -3.95981e-11  2.90119e-12 -1.02140e-13  1.94281e-15 -1.72877e-17  5.22242e-20
+#
+# Y astig
+#
+   -0.0449695  -0.00168079  0.000137642 -3.07275e-06  2.90090e-08 -1.02139e-10
+ -0.000683464  0.000313953 -1.76979e-05  4.20145e-07 -4.33798e-09  1.60867e-11
+  4.53527e-05 -1.19884e-05  7.42324e-07 -1.90131e-08  2.06252e-10 -7.88599e-13
+ -8.60485e-07  2.09206e-07 -1.43177e-08  3.88414e-10 -4.34680e-12  1.69254e-14
+  6.98063e-09 -1.74765e-09  1.27016e-10 -3.56654e-12  4.06805e-14 -1.60368e-16
+ -2.06838e-11  5.60510e-12 -4.18931e-13  1.19761e-14 -1.38205e-16  5.49814e-19
+#
+# X coma
+#
+   0.00189492   0.00106571 -5.75561e-05  1.10951e-06 -8.42243e-09  2.21994e-11
+ -0.000172748 -0.000104264  4.54265e-06 -5.96514e-08  1.79590e-10  6.37154e-13
+  1.56843e-05  1.92350e-06 -7.64615e-08  2.99069e-10  1.23056e-11 -9.68391e-14
+ -8.06704e-07  3.63493e-08 -1.98613e-09  6.43418e-11 -8.89210e-13  4.16119e-15
+  1.22660e-08 -1.01110e-09  5.01489e-11 -1.23648e-12  1.41300e-14 -5.89410e-17
+ -5.71860e-11  5.53220e-12 -2.69675e-13  6.22269e-15 -6.67815e-17  2.65672e-19
+#
+# Y coma
+#
+   -0.0115151  0.000705080 -1.96223e-05  2.35446e-07 -5.32386e-10 -2.53560e-12
+ -0.000226370  6.65195e-05 -4.84179e-06  1.32684e-07 -1.51214e-09  6.01077e-12
+  3.51920e-05 -4.84482e-06  2.32022e-07 -4.84728e-09  4.65767e-11 -1.68361e-13
+ -9.56820e-07  9.49381e-08 -3.08714e-09  3.79510e-11 -1.78688e-13  2.50374e-16
+  9.91860e-09 -7.24722e-10  1.05754e-11  2.03635e-13 -4.87183e-15  2.36667e-17
+ -3.60260e-11  1.84858e-12  2.19446e-14 -2.35250e-15  3.54476e-17 -1.54478e-19
+#
+# Coefficients to transform detector X,Y to V2,V3
+#
+# Updated March 2008 from IDCTAB qbu1641sj_idc.fits 
+# using F660N entries.
+#
+# V2,V3 (pupil) coordinates of reference position
+#
+  -254.999  -302.073   =  in arcsec
+#
+# detector X,Y of reference position
+#
+   2048 1024  = pixels
+#
+# V2,V3 (pupil) coordinates of WFC camera center
+#
+  -254.90  -248.35  =  in arcsec
+#
+# X,Y -> V2 transform coefficients
+#
+ 1.957765E-3          4.982509E-2
+9.538397E-8          -2.499812E-7         4.232848E-7
+ 8.410904E-14         -2.596937E-11        -2.935730E-12        -2.333032E-11
+ -1.469246E-15        -1.109019E-15        2.155463E-15         9.820511E-16         1.158226E-15
+##OLD0.002062       0.04982   
+##OLD9.299500E-8  -2.474800E-7   4.218800E-7 
+##OLD-4.562800E-13 -2.572700E-11 -2.994800E-12 -2.324600E-11 
+##OLD-2.907000E-16 -6.304300E-16  2.222500E-15  6.068900E-16  1.172200E-15       
+#
+# X,Y -> V3 transform coefficients
+#
+5.026925E-2          1.486490E-3
+ -3.598093E-7         3.045639E-7          -7.444254E-8
+-2.195674E-11        -3.837861E-12        -2.608960E-11        3.482552E-12 
+-5.349350E-16        -1.108254E-15        -2.211755E-15        -5.595698E-17 -9.595903E-16
+##OLD  0.05027      0.001401  
+##OLD-3.600800E-7   3.052200E-7  -7.592200E-8 
+##OLD-2.079000E-11 -4.807200E-12 -2.567000E-11  3.907300E-12 
+##OLD-1.327600E-15 -1.362500E-15 -1.478900E-15 -3.630700E-16 -8.583500E-16
+#
+# V2,V3 -> X
+#
+-0.7825539      20.09355
+-9.591462E-4    0.002429289     -0.003521133
+ -6.962226E-7    5.352054E-6     -2.017721E-6    5.139048E-6
+ 3.597103E-9     6.921177E-9     -1.269473E-8    1.857911E-9     -7.876311E-9
+##OLD  -0.824051       20.0952  
+##OLD-9.504600E-4     0.0024248    -0.0035079  
+##OLD-6.507200E-7   5.406000E-6  -2.078100E-6   5.235900E-6  
+##OLD1.138400E-10  -5.772900E-9  -1.293000E-8   3.091100E-9  -8.087800E-9     
+#
+# V2,V3 -> Y
+#
+19.91602        -0.5941759
+ 0.002962756     -0.002715201    7.768876E-4 
+4.437755E-6     -1.724276E-6    5.459243E-6     -1.167637E-6 
+4.422004E-9     -1.133850E-9    1.182387E-8     -4.977830E-9    4.367900E-9
+##OLD  19.9154     -0.559841     
+##OLD0.0029682    -0.0027102   7.780500E-4   
+##OLD4.299500E-6  -1.596600E-6   5.474500E-6  -1.270500E-6   
+##OLD6.858300E-9  1.496400E-10   9.275300E-9   3.881900E-9   4.111000E-9
+#
+# ACS CCD pixel scattering function kernels (CCD pixel resolution)
+#
+0.400  = Wavelength (microns) of kernel 1
+#
+# Kernel 1
+#
+    0.0323256    0.0965193    0.0323256
+    0.0965193     0.484621    0.0965193
+    0.0323256    0.0965193    0.0323256
+#
+0.600  = Wavelength (microns) of kernel 2
+#
+# Kernel 2
+#
+    0.0231293    0.0755252    0.0231293
+    0.0755252     0.605382    0.0755252
+    0.0231293    0.0755252    0.0231293
+#
+0.800  = Wavelength (microns) of kernel 3
+#
+# Kernel 3
+#
+    0.0132919    0.0455935    0.0132919
+    0.0455935     0.764459    0.0455935
+    0.0132919    0.0455935    0.0132919
+#
+# Additional field dependent charge diffusion coefficients
+#
+     3   = Number of wavelengths for field-dep charge diffusion coefficients
+#
+#
+ 0.435   = Reference wavelength (microns) of the following coefficients
+     0.487335  -0.00647898  0.000318324 -8.34976e-06  1.00723e-07 -4.28888e-10
+   -0.0166739   0.00383504 -0.000244731  5.40509e-06 -5.05609e-08  1.72899e-10
+   0.00113817 -0.000252373  1.38176e-05 -2.55769e-07  1.95465e-09 -5.39193e-12
+ -2.87276e-05  5.94935e-06 -2.92990e-07  4.70210e-09 -2.86046e-11  5.28345e-14
+  3.01707e-07 -5.91361e-08  2.70189e-09 -3.85975e-11  1.80240e-13 -9.05831e-17
+ -1.11887e-09  2.11195e-10 -9.15140e-12  1.19334e-13 -4.13183e-16 -6.23616e-19
+#
+#
+ 0.550   = Reference wavelength (microns) of the following coefficients
+     0.417118  -0.00533749  0.000262242 -6.87870e-06  8.29768e-08 -3.53324e-10
+   -0.0137360   0.00315931 -0.000201611  4.45274e-06 -4.16524e-08  1.42435e-10
+  0.000937620 -0.000207906  1.13830e-05 -2.10704e-07  1.61026e-09 -4.44194e-12
+ -2.36657e-05  4.90109e-06 -2.41367e-07  3.87362e-09 -2.35648e-11  4.35264e-14
+  2.48545e-07 -4.87163e-08  2.22583e-09 -3.17968e-11  1.48485e-13 -7.46351e-17
+ -9.21726e-10  1.73982e-10 -7.53895e-12  9.83088e-14 -3.40392e-16 -5.13691e-19
+#
+#
+ 0.814   = Reference wavelength (microns) of the following coefficients
+     0.403931  -0.00190633  0.000213433 -5.42223e-06  5.77306e-08 -2.32724e-10
+    0.0107884  -0.00126808  4.85872e-05 -1.06454e-06  1.07470e-08 -3.74078e-11
+ -0.000723850  0.000103276 -5.25020e-06  1.32417e-07 -1.44594e-09  5.46557e-12
+  1.65576e-05 -2.61949e-06  1.44392e-07 -3.74929e-09  4.13982e-11 -1.57840e-13
+ -1.56385e-07  2.65205e-08 -1.51682e-09  3.97827e-11 -4.39702e-13  1.67473e-15
+  5.25375e-10 -9.36742e-11  5.47066e-12 -1.44109e-13  1.59025e-15 -6.03561e-18
+#
+# Zernike file for Advanced Camera Wide Field Channel 2
+# March 2003
+#
+  547.     # Reference wavelength (nm)
+  22       # Last Zernike in file
+  0.       # Z1 = (Not used)
+  0.       # Z2 = X (V2) tilt
+  0.       # Z3 = Y (V3) tilt
+0.045160 # Z4 = Focus for center of ACS/WFC field 
+  0.031    # Z5 = 0 degree astigmatism
+  0.028    # Z6 = 45 degree astigmatism
+  0.003    # Z7 = X (V2) coma
+  0.001    # Z8 = Y (V3) coma
+  0.007    # Z9 = X clover
+  0.018    # Z10 = Y clover
+ -0.025    # Z11 = 3rd order spherical
+  0.       # Z12 = 0 degree Spherical astigmatism
+  0.       # Z13 = 45 degree Spherical astigmatism
+  0.       # Z14 = X Ashtray
+  0.       # Z15 = Y Ashtray
+  0.       # Z16
+  0.       # Z17
+  0.       # Z18
+  0.       # Z19
+  0.       # Z20
+  0.       # Z21
+  0.009    # Z22 = 5th order spherical
