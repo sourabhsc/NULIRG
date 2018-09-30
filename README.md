@@ -140,7 +140,7 @@ Briefly these are all the steps  that are performed:--
 
 ## Versioning
 
-We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags). 
+We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/sourabhsc/NULIRG/tags). 
 
 ## Authors
 
