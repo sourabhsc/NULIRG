@@ -17,12 +17,28 @@ import pandas as pd
 import os
 
 from astropy.table import Table, Column, MaskedColumn
+from utils import file_remove
 
+import photutils
+from photutils import create_matching_kernel
+from astropy.io import fits
+from matplotlib import pyplot as plt
+import numpy as np
+import scipy
+from photutils import TopHatWindow
+from photutils import CosineBellWindow
+
+
+window = CosineBellWindow(alpha=0.35)
+from scipy.signal import convolve as scipy_convolve
+window = TopHatWindow(0.35)
 filt = ['775', '782']
 
 
 def psf_rotate(psf, psf_rot, angle):
+    file_remove(psf_rot)
     iraf.rotate(psf + '[0]', psf_rot, -angle, interpolant='nearest')
+    iraf.rotate.unlearn()
 
 
 def psf_cutting(psf, angle, psf_rot, psf_cut, size):
@@ -45,9 +61,11 @@ def psf_cutting(psf, angle, psf_rot, psf_cut, size):
 
 
 def psf_matching(i, fil, input, psf165):
-    ker = "ker%s_gal%s_ref165.fits" % (fil, i + 1)
-    iraf.psfmatch(input, psf165, input, ker, convolution='psf')
-    # cl> psfmatch inimage refpsf inpsf kernel convolution=psf
+    ker = os.path.dirname(input) + '/' + "ker%s_gal%s_ref165.fits" % (fil, i + 1)
+    data_ref = fits.getdata(psf165)
+    data_psf = fits.getdata(input)
+    kernel = create_matching_kernel(data_psf, data_ref)  # , window = window )
+    fits.writeto(ker, data=kernel, overwrite=True)
     return ker
 
 
@@ -66,13 +84,13 @@ def main(config_file):
                 if tab['galaxy'][k] == gal_name and tab['filtername'][k] == 'F775W':
                     angle = float(tab['orientation'][k])
             print (angle)
-            psf = params['script_dir'] + 'PSF_%s_gal%s.fits' % (filt[j], i + 1)
+            psf = params['hapsf_dir'] + 'PSF_%s_gal%s.fits' % (filt[j], i + 1)
             psf_rot = psf.replace('gal%s' % (i + 1), 'gal%s_rotate' % (i + 1))
             psf_cut = psf_rot.replace("rotate", "rotate_cut")
             psf_rotate(psf, psf_rot, angle)
             size = 130
             psf_cutting(psf, angle, psf_rot, psf_cut, size)
-            psf165 = 'f165psf.fits'
+            psf165 = params['hapsf_dir'] + 'f165psf.fits'
             data = fits.getdata(psf165)
             print (data.shape, data.sum())
 
@@ -82,10 +100,13 @@ def main(config_file):
             hdu.writeto(psf_cut, overwrite=True)
             hdu.close()
             print (data.shape, data.sum())
-            ker = psf_matching(i, filt[j], psf_cut, psf165)
-            ker_rot = ker.replace('165', '165_rotate')
-            # rotate kernels
-            psf_rotate(ker, ker_rot, -angle)
+    for j in range(2):
+        psf_cut = params['hapsf_dir'] + 'PSF_%s_gal%s_rotate_cut.fits' % (filt[j], i + 1)
+        psfref = params['hapsf_dir'] + 'PSF_775_gal%s_rotate_cut.fits' % (i + 1)  # 'f165psf.fits'  #
+        ker = psf_matching(i, filt[j], psf_cut, psfref)
+        ker_rot = ker.replace('165', '165_rotate')
+        # rotate kernels
+        psf_rotate(ker, ker_rot, -angle)
 
 
 if __name__ == '__main__':
