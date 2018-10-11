@@ -55,7 +55,7 @@ from drizzlepac import astrodrizzle
 adriz=astrodrizzle.AstroDrizzle
 
 
-
+import glob
 filt = ['775', '782']
 
 from utils import basic_params
@@ -65,6 +65,7 @@ import os
 #-----------------------------------------------------------------------------
 hsel=iraf.hselect
 #rd2xy=skytopix.rd2xy
+import shutil
 imcent=iraf.imcentroid
 # Dirty fix, specify directory where tinytim can be found
 
@@ -191,12 +192,12 @@ def hstsim(ind, images,psfs,simwcs,exts,psfscale,order):
 		print('Co-adding the PSF model to the input frame')
 		shifts=(simcoo[0][1],simcoo[0][0])
 		print (exptime, psfscale, shifts, order, extyes)
-		psf_shifted=geotr(psf,shift_func, extra_arguments=shifts,order=order)*exptime*psfscale#*10**5
-		#psf_shifted = psf
+		#psf_shifted=geotr(psf,shift_func, extra_arguments=shifts,order=order)*exptime*psfscale#*10**5
+		psf_shifted = psf
 		sim1 = np.copy(sim)
-		fits.writeto( "psfshift.fits", data = psf_shifted, overwrite = True)
-		fits.writeto( "psf.fits", data = psf,  overwrite = True)
-		fits.writeto( "before_adding.fits", data = sim,  overwrite = True)
+		#fits.writeto( "psfshift.fits", data = psf_shifted, overwrite = True)
+		#fits.writeto( "psf.fits", data = psf,  overwrite = True)
+		#fits.writeto( "before_adding.fits", data = sim,  overwrite = True)
 		
 		#print (psf_shifted.shape)
 		#if boxcoo[2]<boxcoo[0]:
@@ -216,7 +217,7 @@ def hstsim(ind, images,psfs,simwcs,exts,psfscale,order):
 		print ("exptime -->" , exptime)
 
 		#fits.writeto("magic.fits", data = sim1-sim, overwrite = True)
-		fits.writeto("magic.fits", data = sim1, overwrite = True)
+		#fits.writeto("magic.fits", data = sim1, overwrite = True)
 
 		# Write to output fits file
 		hdu_gal[extyes].data = sim1
@@ -323,7 +324,7 @@ def wcstopixfile(wcscoords,refima,imcoords):
 #-----------------------------------------------------------------------------
 # Main
 #-----------------------------------------------------------------------------
-def ha_psf(im_drz, ind, imlist,loclist,tinybase,simpos,drzcfg,outpsf,psfscale,order,defkey):
+def ha_psf(config_file, im_drz, psf_out_dir, ind, imlist,loclist,tinybase,simpos,drzcfg,outpsf,psfscale,order,defkey):
 	"""Main script""" 
 	# Get inputs and perform some sanity checks
 	print('*******************************************')
@@ -399,7 +400,7 @@ def ha_psf(im_drz, ind, imlist,loclist,tinybase,simpos,drzcfg,outpsf,psfscale,or
 	rpsfnames=[name+'.fits' for name in rpsfnames]
 	# Rename the raw models, remove the rest.
 	call(['rename s/00.fits/.fits/ *00.fits'],shell=True)
-	call(['rm -f '+psfbase+'*tt3 '+psfbase+'*00_psf.fits '+psfbase+'*conf'],shell=True)
+	#call(['rm -f '+psfbase+'*tt3 '+psfbase+'*00_psf.fits '+psfbase+'*conf'],shell=True)
 	print('The following raw psf models have been created:')
 	for name in rpsfnames: print(name)
 	
@@ -420,11 +421,11 @@ def ha_psf(im_drz, ind, imlist,loclist,tinybase,simpos,drzcfg,outpsf,psfscale,or
 	print('Drizzling unsimulated data.')
 	print('********************************************************************************') 
 	# Setup drizzlepac
-	tmpcfg = "tmp"+str(int(rand()*1e8))+".cfg"
+	tmpcfg = os.path.dirname(images[0])+'/'+"tmp"+str(int(rand()*1e8))+".cfg"
 	sbccfg  = "sbc_driz.cfg"
 	uviscfg = "uvis_driz.cfg"
-	config_dir = '/home/sourabh/ULIRG_package/config/'
-	wfccfg  = config_dir+ "astrodrizzle_WFC_conf.cfg"
+	config_dir = os.path.dirname(config_file)
+	wfccfg  = config_dir+'/'+ "astrodrizzle_WFC_conf.cfg"
 	hrccfg  = "hrc_driz.cfg"
 	with open(drzcfg) as ff: oblines=ff.read().splitlines()
 	if detector == "SBC" : 
@@ -469,7 +470,7 @@ def ha_psf(im_drz, ind, imlist,loclist,tinybase,simpos,drzcfg,outpsf,psfscale,or
 	print ("WWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW")
 	 
 	nosima= os.path.dirname(images[0])+'/'+filt1+'_nosim.fits'
-	tmpout='tmp'+str(int(rand()*1e8))
+	tmpout= os.path.dirname(images[0]).replace('FITS', 'TXT')+ '/'+'tmp'+str(int(rand()*1e8))
 	adriz(input=images,output=tmpout,runfile='astrodrizzle.log',final_wht_type = 'ERR',
 		configobj=tmpcfg)
 	print ("WWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW")
@@ -488,7 +489,7 @@ def ha_psf(im_drz, ind, imlist,loclist,tinybase,simpos,drzcfg,outpsf,psfscale,or
 	print('Drizzling simulated data.')
 	print('********************************************************************************') 
 	sima=os.path.dirname(images[0])+'/'+ filt1+'_sim.fits'
-	tmpout='tmp'+str(int(rand()*1e8))
+	tmpout= os.path.dirname(images[0]).replace('FITS', 'TXT')+'/'+'tmp'+str(int(rand()*1e8))
 	adriz(input=simimas,output=tmpout,runfile='astrodrizzle.log',final_wht_type = 'ERR',
 		configobj=tmpcfg)
 	if os.path.exists(tmpout+'_drc.fits'):
@@ -530,7 +531,7 @@ def ha_psf(im_drz, ind, imlist,loclist,tinybase,simpos,drzcfg,outpsf,psfscale,or
 	hdu_sim.writeto(sima.replace('sim', 'sim_sub'), overwrite = True)
 	hdu_sim.close()
 	
-	simimfile='tmp'+str(int(rand()*1e8))+'_im.coords'
+	simimfile = os.path.dirname(images[0]).replace('FITS', 'TXT')+'/'+'tmp'+str(int(rand()*1e8))+'_im.coords'
 	
 
 	imcoords = wcstopixfile(simpos,sima,simimfile)
@@ -569,7 +570,7 @@ def ha_psf(im_drz, ind, imlist,loclist,tinybase,simpos,drzcfg,outpsf,psfscale,or
 	hdu1 = fits.PrimaryHDU(data = psf_s2)
 	header1 = hdu1.header
 	header1["CREATOR"] = ("SSC", "Sept 17 2018")
-	hdu1.writeto("%s.fits"%(outpsf), overwrite = True)
+	hdu1.writeto("%s%s.fits"%(psf_out_dir, outpsf), overwrite = True)
 	'''
 	psfstamp=pyf.getdata(finalout)
 	hdr=pyf.getheader(finalout)
@@ -583,28 +584,31 @@ def ha_psf(im_drz, ind, imlist,loclist,tinybase,simpos,drzcfg,outpsf,psfscale,or
 def main(config_file):
 	#im_drz =[(1320.2164578776137, 4232.254568212932),(3133.44270371664,	5998.802594324208),(1077.9077757159448, 1782.7589540070876),(4144.009171783876, 5989.1062047339765),(5859.227208853262, 4226.265089816052)]
 	im_drz =[(1320.2164578776137, 4232.254568212932),(3133.44270371664,	5998.802594324208),(1078.92343744, 1784.99832295),(4144.009171783876, 5989.1062047339765),(5859.227208853262, 4226.265089816052)]
-
 	for i in range(5):
-		if i ==2:
-			section_gal = 'NULIRG%s' % (int(i + 1))
-			params, params_gal = basic_params(config_file, 'basic', section_gal)
-			drizconfig = params['wfc_config']
-			psfscale = float(params['psfscale'])
-			order = int(params['order'])
-			defkey = params['defkey']
-			gal_name = params_gal['name']
-			primary_dir = params['data_dir'] + gal_name + '/'
-			txt_dir = primary_dir + 'HA_PSF/TXT/' 
-			call('./tiny1')
-			for j in range(2):
-				outpsf = params['outpsf']+'_%s_gal%s'%(filt[j], i+1)
+		section_gal = 'NULIRG%s' % (int(i + 1))
+		params, params_gal = basic_params(config_file, 'basic', section_gal)
 
-				imlist = txt_dir + 'imlist%s_gal%s.txt' % (filt[j], i + 1)
-				loclist = txt_dir + 'loclist%s_gal%s.txt' % (filt[j], i + 1)
-				tinybase = params['config_dir'] + 'tinybase%s_gal%s.txt' % (filt[j], i + 1)
-				simpos = txt_dir + 'simpos%s_gal%s.txt' % (filt[j], i + 1)
-				ha_psf(im_drz, i, imlist,loclist,tinybase,simpos,drizconfig,
-				outpsf, psfscale,order,defkey)
+		drizconfig = params['wfc_config']
+		psfscale = float(params['psfscale'])
+		order = int(params['order'])
+		defkey = params['defkey']
+		gal_name = params_gal['name']
+		primary_dir = params['data_dir'] + gal_name + '/'
+		txt_dir = primary_dir + 'HA_PSF/TXT/' 
+		call('./tiny1')
+		psf_out_dir = params['data_dir'] + 'OPTICAL_PSF/'
+
+		for j in range(2):
+			outpsf = params['outpsf']+'_%s_gal%s'%(filt[j], i+1)
+
+			imlist = txt_dir + 'imlist%s_gal%s.txt' % (filt[j], i + 1)
+			loclist = params['config_dir'] + 'loclist%s_gal%s.txt' % (filt[j], i + 1)
+			tinybase = params['config_dir'] + 'tinybase%s_gal%s_v3.txt' % (filt[j], i + 1)
+			simpos = params['config_dir']+ 'simpos%s_gal%s.txt' % (filt[j], i + 1)
+			ha_psf(config_file, im_drz, psf_out_dir, i, imlist,loclist,tinybase,simpos,drizconfig,
+			outpsf, psfscale,order,defkey)
+	tmp_files = glob.glob(os.getcwd()+ '/psf*')
+	[shutil.move(x,psf_out_dir+'RAW_PSF/'+os.path.basename(x) ) for x in tmp_files]
 
 
 

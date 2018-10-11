@@ -1,3 +1,5 @@
+from __future__ import absolute_import, division, print_function
+
 import argparse
 import os
 import sys
@@ -19,7 +21,7 @@ from utils import mkdirp
 from astropy.io import ascii
 #    print("Call your main application code here")
 
-__version__ = '0.0.3'
+#__version__ = '0.0.3'
 
 
 class make_directories():
@@ -59,7 +61,7 @@ class make_directories():
         df = pd.DataFrame(dict_files)
         df.to_csv(text_file, index=False)
         d1 = ascii.read(text_file)
-        ascii.write(d1, 'test.txt', format='rst')
+        ascii.write(d1, 'test.txt', format='rst', overwrite=True)
         return dict_files
 
     def copy_files(self, dict_files, galaxy_name, keep_original):
@@ -234,9 +236,9 @@ if __name__ == '__main__':
     print ('----------------------------------------------------------\n')
 
 
-#def setup(app):
+# def setup(app):
 #    app.add_html_theme('dask_sphinx_theme', path.abspath(path.dirname(__file__)))
 
-from ._version import get_versions
+from _version import get_versions
 __version__ = get_versions()['version']
 del get_versions
