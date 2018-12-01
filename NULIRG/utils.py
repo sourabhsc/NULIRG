@@ -1,5 +1,5 @@
-"""This code contains many small utility functions that are constantly used in ULIRG reduction steps. 
-The main funciton creates the location list for FLC images which are used for optical psfmatching 
+"""This code contains many small utility functions that are constantly used in ULIRG reduction steps.
+The main funciton creates the location list for FLC images which are used for optical psfmatching
 """
 
 import configparser
@@ -10,7 +10,7 @@ from numpy import unravel_index
 # import ULIRG_params as param
 from astropy.wcs import WCS
 from astropy.io import ascii
-
+import pandas as pd
 # basic call for reading config
 
 
@@ -22,6 +22,7 @@ from astropy.io import ascii
 import os
 os.environ["iraf"] = "/home/sourabh/bin/miniconda3/envs/iraf27/iraf"
 os.environ["IRAFARCH"] = "linux"
+from matplotlib import patches
 
 from matplotlib.patches import Circle
 from matplotlib.patheffects import withStroke
@@ -33,14 +34,14 @@ def rectangle(left_corner_x, left_corner_y, x_size, y_size, color_val, ax2):
     Args:
         left_corner_x: (float) left x corner of rectangle
         left_corner_y: (float) left y corner of rectangle
-        x_size: (float) size of the box along x axis 
-        y_size: (float) size of the box along y axis 
+        x_size: (float) size of the box along x axis
+        y_size: (float) size of the box along y axis
         color_val: (str) color of the box lines
         ax2: (str) plot axes where the rectangle will be inserted
     """
     ax2.add_patch(patches.Rectangle((left_corner_x, left_corner_y), x_size, y_size,
                                     fill=False,
-                                    linestyle='dotted',
+                                    #linestyle='dotted',
                                     color=color_val,
                                     linewidth=2.0))
 
@@ -49,7 +50,7 @@ def basic_params(configfile, section, section_gal):
     """Function to parse out the config file values. There are 6 sections in the config file:-
     basic, NULIRG1, NULIRG2, NULIRG3, NULIRG4, NULIRG5. Basic section contains all the parameters that are
     common for all ULIRGs, while all other paramters are ULIRG specific written in their respective sections
-    
+
     Args:
         configfile:(str) the config file for the ULIRG analysis (Default file is DIR/config/params_config.cfg)
         section: (str) 'basic' section which contains paramters commont for all ULIRGs
@@ -92,10 +93,10 @@ def pad_with(vector, pad_width, iaxis, kwargs):
 
 
 def UV_centers(params, params_gal, i):
-    """Function for finding center of drizzled F125 image used as refrence for optical image alignment. 
+    """Function for finding center of drizzled F125 image used as refrence for optical image alignment.
     centers are found out by finding the pixel with largest flux value.
     Args:
-        params: (dict) Dictionary of 'basic' section of config file (common for all ULIRGs) 
+        params: (dict) Dictionary of 'basic' section of config file (common for all ULIRGs)
         params_gal: (dict) Dictionary of galaxy parameters from config file
         i : index of ULIRG
     Returns:
@@ -109,12 +110,13 @@ def UV_centers(params, params_gal, i):
     primary_dir = params['data_dir'] + params_gal['name'] + '/'
     hdulist = fits.open("%sgal%s_UV_F125_drz.fits" % (primary_dir + 'UV_DRZ/', i + 1))
     data = hdulist[1].data
-    if i == 2:
-        data[:, 700:-1] = 0.0
-        data[data > 0.020] = 0.0
     where_are_NaNs = np.isnan(data)
 
     data[where_are_NaNs] = 0
+    if i == 2:
+        data[:, 700:-1] = 0.0
+        data[data > 0.020] = 0.0
+
     c = (unravel_index(data.argmax(), data.shape))
     pos.append((c[1], c[0]))
 
@@ -143,9 +145,28 @@ def UV_centers_drz(filename):
     return xc, yc
 
 
+def DRC_centers(filename):
+    hdu = fits.open(filename)
+    data = fits.getdata(filename)
+    where_are_NaNs = np.isnan(data)
+    data[where_are_NaNs] = 0
+    header = hdu[1].header
+    data[0:200, :] = 0.0  # removing hot pixels
+    data[:, 800:] = 0.0  # removing hot pixels
+
+    c = (unravel_index(data.argmax(), data.shape))
+    w = WCS(header)
+    r1 = w.wcs_pix2world(c[1], c[0], 0)
+
+    print(c[1], c[0])
+    drc_ra = (r1[0])  # changed integer thing
+    drc_dec = (r1[1])
+    return drc_ra, drc_dec
+
+
 def FLC_centers(i, cent_ra, cent_dec, file):
     """Function to highest flux position around the positon of galaxy in FLC files.
-    
+
     These are used for psfmatching in optical filters.
 
     Args:
@@ -206,7 +227,7 @@ def masks_circular(cent_x, cent_y, width, aper_lim, nx, ny):
 
 def mkdirp(directory):
     """makes adirectory if it does not exist
-    
+
     """
     if not os.path.isdir(directory):
         os.makedirs(directory)
@@ -224,13 +245,9 @@ def circle(x, y, rad, col_circ1, ax4):
     """Plots a circle given center, radius, color and axes to plot. 
 
     """
-    circle = Circle((x, y), rad, clip_on=False, linewidth=0.5, edgecolor=col_circ1, facecolor=(0, 0, 0, .0125), label="%s" % (rad))  # ,
+    circle = Circle((x, y), rad, clip_on=False, linewidth=5.5, edgecolor=col_circ1, facecolor=(0, 0, 0, .0125), label="%s" % (rad))  # ,
     # path_effects=[withStroke(linewidth=5, foreground='w')])
     ax4.add_artist(circle)
-
-
-
-
 
 
 gal_id_all = ["IRASF10594+3818", "IRASF12447+3721", "IRASF13469+5833", "IRASF14202+2615", "IRASF22206-2715"]
@@ -241,34 +258,56 @@ if __name__ == '__main__':
     filt = ['775', '782']
     xx = []
     yy = []
+    simpos_ra = []
+    simpos_dec = []
     for i in range(5):
 
         section_gal = 'NULIRG%s' % (int(i + 1))
         params, params_gal = basic_params('/home/sourabh/ULIRG_package/config/params_default.cfg', 'basic', section_gal)
         primary_dir = params['data_dir'] + params_gal['name'] + '/'
-        cent_x, cent_y, cent_ra, cent_dec = UV_centers(params, params_gal, i)
+        cent_x, cent_y, UV_ra, UV_dec = UV_centers(params, params_gal, i)
+        file_drc = '/home/sourabh/ULIRG_package/data/%s/HA_INTER/FITS/gal%s_HA_F775W_scale_04_cut_drc.fits' % (gal_id_all[i], i + 1)
+        drc_ra, drc_dec = DRC_centers(file_drc)
         name = '/home/sourabh/ULIRG_package/data/%s/HA_FLC/FITS/%s' % (gal_id_all[i], name_wfc[i])
-        print (name)
-        pixx, pixy = FLC_centers(i, cent_ra, cent_dec, name)
+        # print (cent_x, cent_y, UV_ra, UV_dec)
+        print (drc_ra, drc_dec, UV_ra, UV_dec)
+        pixx, pixy = FLC_centers(i, drc_ra, drc_dec, name)
         xx.append(pixx)
         yy.append(pixy)
+        simpos_ra.append(drc_ra)
+        simpos_dec.append(drc_dec)
+        config_dir = params['config_dir']
+        dict_cen_ha = dict.fromkeys(['xcen', 'ycen'])
+    dict_cen_ha['xcen'] = xx
+    dict_cen_ha['ycen'] = yy
+
+    df = pd.DataFrame.from_dict(dict_cen_ha)
+    df.to_csv(config_dir + 'ha_cent.txt', header=True, index=False, sep=' ', mode='w')
+
     print (xx, yy)
     for i in range(5):
         section_gal = 'NULIRG%s' % (int(i + 1))
         params, params_gal = basic_params('/home/sourabh/ULIRG_package/config/params_default.cfg', 'basic', section_gal)
         primary_dir = params['data_dir'] + params_gal['name'] + '/'
-        txt_dir = primary_dir + 'HA_PSF/TXT/'
+        config_dir = params['config_dir']
+        # txt_dir = primary_dir + 'HA_PSF/TXT/'
 
         for j in range(2):
-            loclist = txt_dir + 'loclist%s_gal%s.txt' % (filt[j], i + 1)
+            loclist = config_dir + 'loclist%s_gal%s.txt' % (filt[j], i + 1)
+            simpos = config_dir + '/' + 'simpos%s_gal%s.txt' % (filt[j], i + 1)
+
             with open(loclist, 'w') as f:
-                if i ==4:
+                if i == 4:
 
                     [f.write("4 \t %s \t %s\n" % (xx[i], yy[i]))]
                     [f.write("4 \t %s \t %s\n" % (xx[i], yy[i]))]
                 else:
                     [f.write("1 \t %s \t %s\n" % (xx[i], yy[i]))]
                     [f.write("1 \t %s \t %s\n" % (xx[i], yy[i]))]
+            with open(simpos, 'w') as f:
+                [f.write("%s \t %s \n" % (simpos_ra[i], simpos_dec[i]))]
+                [f.write("%s \t %s \n" % (simpos_ra[i], simpos_dec[i]))]
+
 
 # if __name__ == '__main__':
 
