@@ -21,11 +21,15 @@ conda install termcolor
 
 ```
 
-### Data reduction steps
+## Data reduction steps
 
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. Here are the steps to run the pipeline:-
-1. [Required] Download the FLT and FLC files for SBC, WFC filters for different ULIRGs in the working directory **DIR**.
+
+### Data downloads
+1. [Required] Download the FLT and FLC files for SBC, WFC filters for different ULIRGs in the working directory **NULIRG/data folder**.
 2. [Required] Download dark files for the time of observation in a sub folder **data_dark**.
+3. [Required] Download UV and HA PSF files and place them in **UV_PSF** folder and **OPTICAL_PSF** respectively.
+-------------
 3. [Required] Download config files and place all of them in sub directory **config**.
 4. [Optional] Update **params_default.cfg** text file by changing **package_dir** and **data_dir** keywords. (This step is not required if this repository has been downloaded from here.)
 
